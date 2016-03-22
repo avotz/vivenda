@@ -1,0 +1,971 @@
+
+@import "nib"
+@import "normalize.styl"
+@import "icons.styl"
+
+
+naranja = #E96D09
+oscuro = #4C4C4C
+vino = #BB0034
+verde = #00A651
+claro = #808080
+claro2 = #F3F3F3
+azul = #2466ae
+celeste = #B8DAF5
+rojo = #D24F41
+body
+	font-family 'Open Sans', sans-serif
+	line-height 25px
+	font-size 16px 
+	color claro
+	&.mfp-open
+	&.mfp-zoom-out-cur
+		.projects
+		.header
+		.main
+		.footer
+		.banner		 
+			filter: blur(5px);
+			-webkit-filter: blur(5px);
+
+h1
+h2
+	
+	color oscuro
+	font-size 2em
+	line-height 40px
+	margin-top 0
+	margin-bottom 15px
+	letter-spacing -2px
+h3 
+	color naranja
+	margin-top 10px
+	margin-bottom 15px
+	font-size 13px
+	text-transform uppercase
+	
+h4
+	color naranja
+	
+a 
+	text-decoration	none
+
+ul 
+	margin 0
+	padding 0
+p 
+	margin-top 0
+	margin-bottom 15px
+
+input[type="text"]
+input[type="email"]
+textarea
+	border 1px solid #F3F3F3
+	width 100%
+	height 32px
+textarea
+	height 150px 
+	
+
+.inner
+	margin 0 auto
+	max-width 1200px
+	position relative
+	padding-left 15px 
+	padding-right 15px
+	 
+@media screen and (min-width:1200px)
+	padding-right 0
+	padding-left 0	
+
+.wpcf7-submit
+.btn
+	box-shadow none
+	text-decoration none
+	display inline-block
+	padding 16px 17px 15px 18px
+	font 16px 'Tinos'
+	color #ffffff
+	background #f5c34c
+	border none
+	letter-spacing 0
+	text-transform uppercase
+	text-shadow none
+	text-decoration none !important
+	border-radius 0
+	transition all .3s ease
+	
+	&:hover
+		color #FFF
+		background verde
+		transition all .3s ease
+	
+.wpcf7-submit
+.btn-rojo
+	background naranja
+	color #fff
+	
+.btn-verde
+	background verde
+	color #fff
+
+	&:hover
+		background claro
+.btn-naranja
+	background naranja
+	color #fff
+
+	&:hover
+		background azul
+		
+.home 
+	.header
+		position absolute //fixed
+		//background transparent
+		//padding-top 6px//25px
+	.menu 
+		&-bg 
+			&:before
+				display block
+	.main
+		padding-top 2rem
+	
+/*@media screen and (min-width:1024px)
+	.home
+		.header
+			background transparent
+			padding-top 6px */	
+.header
+	position absolute //fixed
+	background azul//rgba(0, 0, 0, .75)
+	left 0
+	top 0
+	z-index 999
+	width 100%
+	min-height 3em
+	transition all .3s ease
+	//padding-top 10px
+
+	/*&.scrolling
+		background rgba(0, 0, 0, .75)
+		padding-top 10px*/
+		
+		
+
+.header-logo
+	display inline-block
+	width 75px//250px
+	margin-right 2.5rem
+	padding-top 7px
+.header-logoImg
+	width 100%
+	
+.header-btn-menu
+	position absolute
+	right 15px
+	background-color transparent
+	border none 
+	outline none 
+	color white
+	font-size 2em
+	top 12px
+
+
+.menu
+	display none
+	position absolute
+	top 59px
+	right 15px
+	left 0
+	width 100%
+	z-index 998
+	background azul//rgba(0, 0, 0, .75)
+	
+
+	li 
+		display block //inline-block
+		position relative
+
+
+	a
+		display block
+		color #FFF
+		padding 1em //.5em
+		font-weight bold
+		position relative
+		&:before
+		&:after
+			content ''
+			height 8px
+			display none
+			position absolute
+			top 0
+		&:before
+			background url('img/hover-menu-left.png') no-repeat azul
+			width 13px
+			left -9px
+			
+		&:after
+			background url('img/hover-menu-right.png') no-repeat azul
+			width 15px
+			right -2px
+
+		&:hover
+			//color naranja
+			//background-image url('img/hover-menu.png') no-repeat
+			//background-color naranja
+			//background linear-gradient(to bottom, #f8b03c 11%,#f28c22 11%,#ee7127 21%,#eb5c28 100%); 
+			background linear-gradient(to bottom, #f8b03c 0%,#ffa73d 10%,#ff7c00 13%,#eb5c28 100%);
+			&:before
+			&:after
+				display block 
+	.sub-menu
+		display none
+		background naranja
+		position relative
+		width 100%
+		top 0//53px
+		
+		a 
+			&:before
+			&:after
+				display none
+		
+	
+@media screen and (min-width:1024px)
+	.header
+		//position //fixed
+		background transparent
+		padding-top 6px 	
+		&-btn-menu
+			display none 
+		
+	.menu
+		display inline-block !important
+		vertical-align top
+		//top 0
+		//left auto
+		position static
+		width 445px
+		background transparent
+		line-height 46px
+	
+
+		li 
+			display inline-block
+			vertical-align top
+			margin-right 15px 
+
+			&:last-child
+				margin-right 0
+				/*a
+					padding-right 0*/
+
+		a
+			padding .5em
+		
+		.sub-menu
+			position absolute
+			//background rgba(0, 0, 0, .75)
+			top 53px
+			li 
+				&:last-child
+				a 
+					padding .5em
+			a 
+				background transparent
+				&:hover 
+					text-decoration underline
+		&-bg 
+			background-color azul
+			border-radius 10px 
+			padding 0 35px
+			width 575px//460px//575px
+			margin 0 auto
+			position relative
+			&:before
+				//display none
+				content ''
+				position absolute
+				background-color red
+				height 15px 
+				width 50px
+				left -21px
+				top -4px
+				background url('img/corner-menu.gif') no-repeat
+			 
+@media screen and (min-width:1200px)
+	.menu
+		right 0
+		
+.banner
+	width 100%
+	height 300px//490px
+	position relative
+
+	&-tag
+		display none 
+		position absolute
+		left 0
+		top 50%
+		transform translate(0, -50%)	
+	
+.banner-slide
+	background-position center center
+	background-repeat no-repeat
+	background-size contain, contain
+	height 300px//620px
+	width 100%
+	text-align center
+	&-logo
+		display inline-block 
+		width 250px
+		padding-top 15rem
+		
+	img 
+		max-width 100%
+@media screen and (min-width:600px)
+	.banner
+	.banner-slide
+		background-position top center	
+		height 490px
+	
+@media screen and (min-width:900px)
+	.banner
+		&-tag 
+			display block
+			width 200px		
+@media screen and (min-width:1024px)
+	.banner
+		margin-top 17px
+	.banner-slide
+		background-size cover, cover
+		&-logo
+			padding-top 10rem
+			
+@media screen and (min-width:1200px)
+	.banner
+		&-tag 
+			width auto
+	.banner-slide
+		
+		background-position center  center
+			
+		
+.banner-pager
+.menuslider-pager 
+	z-index 200
+	position relative
+	bottom -1em
+	text-align center
+	a 
+		background-color claro
+		border 1px solid claro
+		border-radius 50%
+		color $oscuro
+		cursor pointer
+		display inline-block
+		font-size 12px
+		margin 0 3px
+		padding 4px
+
+		&:hover
+			padding 5px
+
+	.cycle-pager-active 
+		padding 5px
+		background-color azul
+		border 1px solid azul
+.banner-pager
+	bottom 3em
+	.cycle-pager-active 
+		padding 5px
+		background-color naranja
+		border 1px solid naranja
+.adv
+	position absolute
+	right 0
+	top 50px
+	//background naranja
+	padding .5em
+	display block
+	z-index 201
+	color #FFF
+	padding-right 10px
+	transition all .3s ease
+	
+	/*&:hover
+		background verde*/
+.adv-contact
+	display block
+	width 250px
+	overflow hidden
+	height 36px
+	margin-top 5px
+	img 
+		width 100%
+.adv-1
+.adv-2
+	display inline-block
+	vertical-align middle
+	margin-right .5em
+.adv-title
+	display block
+	font-weight bold
+.adv-fina
+	display block
+.adv-porc
+	font-size 2.5em
+	font-weight bold
+.adv-icon
+	font-size 3em
+	position absolute
+	right 10px
+	top 20px
+@media screen and (min-width:1024px)
+	.adv
+		top 0px
+	.adv-contact
+		height auto
+.menu-slider
+	margin-top 0
+	width 100%
+	overflow hidden
+	height 345px
+
+	.cycle-slideshow
+		width 100% !important
+		height 100%
+.menuslider-pager 
+	bottom -3em
+.menu-sliderSlide
+	height 270px
+	a
+		position relative
+		display block
+		background-size cover
+		background-repeat no-repeat
+		width 100%
+		height 100%
+		background-position 50% 50%
+		max-height 325px
+		transition all .3s ease
+		font-family inmobiliaria
+		
+		&:before
+			background-color: naranja//#00A651;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: '\0020';
+			transition all .3s ease
+		&:after
+			
+			width: 48px;
+			height: 48px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -24px 0 0 -24px;
+			display: block;
+			content: '\e60b';
+			opacity: 0;
+			transition all .3s ease
+			font-size 4em
+			color #FFF
+		&:hover
+			&:before
+				opacity: .8;
+			&:after
+				opacity: 1;
+.main 
+	margin-bottom 50px
+	padding-top 2.5rem //6rem
+.home-iconContainer
+.home-article
+	display inline-block
+	vertical-align top
+	box-sizing border-box
+	text-align center 
+	
+.home-iconContainer 
+	//padding-left: 200px;
+	width 100%//440px
+
+	.icon 
+		background-color: #00A651;
+		text-align: center;
+		margin: auto;
+		display: inline-block;
+		line-height: 0;
+		font-size 12em
+		margin-top 125px
+		color #00A651
+.home-article
+	//padding-right 200px;
+	width: 100%//640px;
+
+	
+@media screen and (min-width:1024px)
+	.home-iconContainer
+	.home-article
+		text-align left 
+		
+	.home-iconContainer 
+		padding-left: 200px;
+		width 440px
+
+	.home-article
+		padding-right 200px;
+		width: 640px;
+
+
+.footer
+.others
+	background url('../img/bg.png') #F3F3F3
+	padding-top: 5em;
+	padding-bottom: 5em;
+
+
+.others-article
+	display inline-block
+	vertical-align top 
+	//margin 0 1.5em
+	width 100%
+	text-align center
+@media screen and (min-width:768px)	
+	.others-article
+		margin 0 1.5em
+		width 340px
+.home 
+	.projects-bg
+		background-image url('./img/banner3.jpg')
+		background-size cover
+		background-position bottom center
+		background-attachment fixed
+		color oscuro
+		padding 20px 0
+		text-align center
+		/*h2 
+			color white	*/
+.projects
+	//margin-top 50px
+	overflow hidden
+	text-align center
+	outline none
+	&-filter
+		display flex
+		flex-wrap wrap 
+		justify-content space-around
+		padding-bottom 1rem 
+		&-item 
+			display inline-block
+			vertical-align top 
+			width 22%
+			//border 1px solid red
+			select
+				//border none 
+				width 100%
+				height 32px
+			
+	&-container
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		list-style none
+	&-item 
+		width 100%
+		position relative
+		margin-bottom .8rem	
+		&-link 
+			display block
+			&:before
+				content ''
+				background-color rgba(0, 0, 0, .25)
+				position absolute
+				z-index 99
+				width 100%
+				height 100%
+			&:hover
+				&:before
+					background-color naranja
+					opacity: .8;
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					content: '';
+					transition all 0.3s ease
+				&:after
+					width: 48px;
+					height: 48px;
+					position: absolute;
+					left: 50%;
+					top: 45%;
+					margin: -24px 0 0 -24px;
+					display: block;
+					content: '\e60b';
+					font-family 'inmobiliaria'
+					opacity: 1;
+					transition: all 0.3s ease;
+					font-size: 4em
+					color: #fff
+					z-index 999
+					transform translate(-45%, -50%)
+					
+
+		&-title 
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			color white
+			z-index 100
+		&-img
+			display block
+			width 100%
+			
+@media screen and (min-width:768px)
+	.projects
+		margin-top 50px
+		text-align left
+						
+@media screen and (min-width:1024px)
+	.projects
+		&-item 
+			width 392px
+			position relative
+@media screen and (min-width:1200px)
+	.projects
+		&-container
+			justify-content space-between
+		
+
+.projects-title
+	//padding-right 25px
+	width 100%//340px
+	display inline-block
+	vertical-align top
+	text-align center
+	margin-left 15px
+	
+	h2
+		margin-bottom 5px
+		letter-spacing -2px
+	h4
+		margin-top 0
+		margin-bottom 1em
+.project
+	display inline-block 
+	vertical-align top
+	//width 100%//380px
+	position relative
+	margin-bottom 30px
+	background-color rgba(255,255,255,.75)
+	padding 5px
+	//border-right 5px solid azul
+	//border-bottom 5px solid azul
+	
+	
+	img 
+		width 100%
+		display block
+	
+.project-icon
+.project-description
+	display inline-block
+	vertical-align top 
+
+.project-icon
+	width 90px 
+	margin 0 1em
+	img 
+		width 100%
+		
+.project-description
+	width 100%//240px
+	
+	.icon
+		background-color naranja
+		color white
+		width 30px
+		height 25px
+		vertical-align middle
+		text-align center
+		padding-top 6px
+		display inline-block
+		
+.project-title
+	font-size 1em
+	color oscuro
+.project-link
+	display inline-block
+	padding .5em
+	background azul
+	color #FFF
+	float right
+	transition all .3s ease
+
+	&:hover
+		background naranja
+/*@media screen and (min-width:500px)	
+	.projects-title
+		padding-right 25px
+		//width 340px
+		margin-left 15px*/
+	
+@media screen and (min-width:768px)
+	.project
+		width 370px
+		margin-right 5px
+		margin-left 5px
+		
+	.project-description
+		width 240px
+		text-align left		
+			
+.number-contact
+	position relative
+.number-contactTitle
+	font-size 1em
+	margin 0
+.number-contactNumber
+	font-size 2em
+	margin 0
+.footer 
+	background #F3F3F3
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	overflow hidden
+	text-align center
+.footer-column
+	display inline-block
+	vertical-align top 
+	width 100%
+	margin-bottom 15px
+.footer-redes
+	//float right
+	width auto //160px
+	//text-align right
+.footer-redesLink
+	display inline-block
+	vertical-align top 
+	color claro
+	padding .2em
+	font-size 2em
+	&:hover
+		color oscuro
+.footer-menu
+	display none
+	ul 
+		list-style none
+	li 
+		display inline-block
+		position relative
+	a 
+		display block
+		padding .2em .5em
+		color claro
+
+		&:hover
+			color oscuro
+	.sub-menu
+		display none
+		position absolute
+.footer-logo
+	display inline-block
+	width 120px
+	//margin-top 3rem
+	
+	img 
+		width 100%
+			
+@media screen and (min-width:768px)
+	.footer-column
+		width 320px
+		margin-bottom 0	
+	.footer-menu
+		display inline-block
+		vertical-align middle
+		//width 100%
+		/*position absolute
+		left 0 
+		right 0*/
+		text-align center
+	.footer-redes
+		display inline-block
+		vertical-align middle
+		padding-right 1rem	
+	.footer-contact
+		display inline-block
+		vertical-align middle
+		//float right
+		width 220px 
+	.footer-logo
+		vertical-align middle
+		margin-top 0
+.page-projectMedia
+.page-projectDetails
+	display inline-block
+	vertical-align top
+	width 100%//460px
+	
+.page-projectDetails
+	text-align left
+	ul
+		margin-bottom 2rem 
+		li 
+			margin-bottom 1rem
+	.corner 
+		width: 0; 
+		height: 0; 
+		border-top: 60px solid transparent;
+		border-bottom: 60px solid transparent;
+		
+		border-left: 60px solid azul;
+		display block
+		left 1rem //86px
+		position absolute
+	&-logo 
+		text-align left
+		width 300px
+		margin-top 25px
+		margin-left 65px
+		margin-bottom 20px
+	&-title
+		line-height 115px
+		margin-left 70px
+	.details 
+		margin 0
+		list-style none
+		dt 
+			display block
+			text-align center
+			cursor pointer
+			border-bottom 1px solid #FFF
+			&:hover
+				background verde
+				border-color verde
+		dd 
+			margin 0
+			padding 1em 0
+
+		a 
+			color naranja
+			text-decoration underline
+			&:hover
+				color verde
+	strong
+		color naranja
+
+	ul 
+		margin-left 50px
+
+.prices
+	margin-top 40px
+
+.prices-cuota
+.prices-get
+	margin-bottom 40px
+	padding-bottom 20px 
+	text-align center
+	color azul
+
+.prices-cuotaText
+.prices-getText
+	display block
+	font-size 1.5em
+	letter-spacing -2px
+	margin-bottom 18px
+	
+.prices-cuotaNumber
+.prices-getNumber
+	font-size 5em
+	font-weight bold
+	
+.modelos
+	text-align center
+
+.page-projectMedia
+	float right
+	//width 555px
+	//text-align right
+.plan-item
+	display inline-block
+	vertical-align top 
+	margin-left 10px
+	margin-bottom 10px
+.hidden
+	display none
+.img
+	border 1px solid #DBDBDB
+	border-radius 5px
+	padding .2em 
+	box-sizing border-box 
+@media screen and (min-width:1024px)
+	.page-projectMedia
+	.page-projectDetails
+		display inline-block
+		vertical-align top
+		width 460px
+		.corner
+			left 15px
+			
+	.page-projectMedia
+		text-align right
+	.prices
+		overflow hidden
+		clear both
+	.prices-cuota
+		float left
+		margin-left 5rem 
+	.prices-get
+		float right	
+@media screen and (min-width:1150px)
+	.page-projectMedia
+	.page-projectDetails
+		width 500px
+	.page-projectMedia
+		width 555px
+.contact
+	border-bottom 13px solid azul
+	border-right 13px solid azul
+	box-shadow 0px 0px 10px rgba(0, 0, 0, .75)  
+	.link-empleo
+		float right
+		margin-top -50px
+		text-decoration underline
+		display block
+		color naranja
+		&:hover
+			color azul
+			text-decoration none
+.social-fixed
+	position fixed
+	top 40%
+	right 0
+	z-index 999
+	display none
+	&-link 
+		display block
+		padding .5rem 
+		color white
+		margin-bottom .3rem
+		font-size 1.5rem
+		&.facebook
+			background-color azul
+		&.twitter
+			background-color celeste
+		&.googleplus
+			background-color rojo
+@media screen and (min-width:768px)
+	.social-fixed
+		display block			
+@import "responsive.styl"	
+
