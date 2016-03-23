@@ -3,13 +3,35 @@
 		projectDetails = $('.page-projectDetails'),
 	 	menu = $('.menu'),
         footerMenu = $('.footer-menu');
-	 $(window).scroll(function () {
+   
+     $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
             header.addClass("scrolling");
         } else {
             header.removeClass("scrolling");
         }
     });
+      
+     $('.projects').mixItUp();
+
+     $('.btn-filter').on('click',function (e) {
+    
+        var filters = '';
+        
+        if($('#category').val())
+            filters += '.'+ $('#category').val();
+        if($('#province').val())
+            filters += '.'+ $('#province').val();
+
+
+         if(filters)
+            $('.projects').mixItUp('filter', filters);
+         else
+             $('.projects').mixItUp('filter', 'all');
+
+
+         e.preventDefault();
+     })
 
 	  menu.find(".menu-item-has-children").hoverIntent({
       over: function() {

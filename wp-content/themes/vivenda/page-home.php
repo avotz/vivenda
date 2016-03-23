@@ -51,14 +51,14 @@ get_header(); ?>
                     <div class="projects-filter-item">
                         <select name="category" id="category">
                             <option value="">Categoria</option>
-                            <option value="lotes">Lotes</option>
-                            <option value="residenciales">Residenciales</option>
-                            <option value="condominios">Condominios</option>
+                            <option value="Lotes">Lotes</option>
+                            <option value="Residenciales">Residenciales</option>
+                            <option value="Condominios">Condominios</option>
                         </select>
                     </div>
                     
                     <div class="projects-filter-item">
-                        <select name="category" id="category">
+                        <select name="province" id="province">
                             <option value="">Zona</option>
                             <option value="Guanacaste">Guanacaste</option>
                             <option value="San Jose">San Jose</option>
@@ -78,6 +78,10 @@ get_header(); ?>
                             <option value="">De $400.000 a $500.000</option>
                             
                         </select>
+                    </div>
+                     <div class="projects-filter-item">
+                     <button class="btn btn-rojo btn-filter">Buscar</button>
+                        
                     </div>
                 </div>
             </div>
@@ -104,7 +108,7 @@ get_header(); ?>
 
                               ?>
                                  
-                                 <article class="project <?php echo implode(' ', $categories);  ?> <?php echo rwmb_meta( 'rw_price'); ?> <?php echo rwmb_meta( 'rw_province'); ?>">
+                                 <article class="project mix <?php echo implode(' ', $categories);  ?> <?php echo rwmb_meta( 'rw_price'); ?> <?php echo rwmb_meta( 'rw_province'); ?>">
                                     <div class="project-icon">
                                         <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
                                          if ( $images ) {?>
@@ -147,7 +151,7 @@ get_header(); ?>
                             }
                           }
                         ?>
-                        <article class="project">
+                        <article class="project mix">
                             <div class="project-icon">
                                 <img src="<?php echo get_template_directory_uri();  ?>/img/cartago.png" alt="">
                             </div>
@@ -160,7 +164,7 @@ get_header(); ?>
                             </div>
                             <a href="./projects/vista-mar/" class="project-link">Ver proyecto</a>
                         </article>
-                         <article class="project">
+                         <article class="project mix">
                             <div class="project-icon">
                                 <img src="<?php echo get_template_directory_uri();  ?>/img/cartago.png" alt="">
                             </div>
@@ -173,7 +177,7 @@ get_header(); ?>
                             </div>
                             <a href="./projects/vista-mar/" class="project-link">Ver proyecto</a>
                         </article>
-                         <article class="project">
+                         <article class="project mix">
                             <div class="project-icon">
                                 <img src="<?php echo get_template_directory_uri();  ?>/img/cartago.png" alt="">
                             </div>
@@ -186,7 +190,7 @@ get_header(); ?>
                             </div>
                             <a href="./projects/vista-mar/" class="project-link">Ver proyecto</a>
                         </article>
-                         <article class="project">
+                         <article class="project mix">
                             <div class="project-icon">
                                 <img src="<?php echo get_template_directory_uri();  ?>/img/cartago.png" alt="">
                             </div>
@@ -199,7 +203,7 @@ get_header(); ?>
                             </div>
                             <a href="./projects/vista-mar/" class="project-link">Ver proyecto</a>
                         </article>
-                         <article class="project">
+                         <article class="project mix">
                             <div class="project-icon">
                                 <img src="<?php echo get_template_directory_uri();  ?>/img/cartago.png" alt="">
                             </div>

@@ -26,7 +26,7 @@ gulp.task('js', function () {
   gulp.src([
       './assets/js/vendor/jquery-1.11.2.min.js',
       './assets/js/vendor/jquery.hoverIntent.minified.js',
-      /*'./assets/js/vendor/jquery.contentcarousel.js',*/
+      './assets/js/vendor/jquery.mixitup.min.js',
       /*'./assets/js/vendor/jquery.easing.1.3.js',*/
       
       './assets/js/vendor/jquery.magnific-popup.min.js',
