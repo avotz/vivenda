@@ -1605,26 +1605,33 @@ textarea {
   margin-top: 40px;
 }
 .prices-cuota,
-.prices-get {
+.prices-get,
+.prices-apartado {
   margin-bottom: 40px;
   padding-bottom: 20px;
   text-align: center;
   color: #2466ae;
 }
 .prices-cuotaText,
-.prices-getText {
+.prices-getText,
+.prices-apartadoText {
   display: block;
   font-size: 1.5em;
   letter-spacing: -2px;
   margin-bottom: 18px;
 }
 .prices-cuotaNumber,
-.prices-getNumber {
+.prices-getNumber,
+.prices-apartadoNumber {
   font-size: 5em;
   font-weight: bold;
 }
-.modelos {
+.models {
   text-align: center;
+}
+.models h1 {
+  color: #2466ae;
+  font-size: 2.5rem;
 }
 .page-projectMedia {
   float: right;
@@ -1662,15 +1669,25 @@ textarea {
     text-align: right;
   }
   .prices {
-    overflow: hidden;
-    clear: both;
-  }
-  .prices-cuota {
-    float: left;
-    margin-left: 5rem;
-  }
-  .prices-get {
-    float: right;
+    min-height: 250px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: distribute;
+    -moz-box-pack: distribute;
+    -o-box-pack: distribute;
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1150px) {
@@ -1679,7 +1696,8 @@ textarea {
     width: 500px;
   }
   .page-projectMedia {
-    width: 555px;
+    width: 650px;
+    padding-top: 5rem;
   }
 }
 .contact {

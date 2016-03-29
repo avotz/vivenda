@@ -878,6 +878,7 @@ textarea
 
 .prices-cuota
 .prices-get
+.prices-apartado	
 	margin-bottom 40px
 	padding-bottom 20px 
 	text-align center
@@ -885,6 +886,7 @@ textarea
 
 .prices-cuotaText
 .prices-getText
+.prices-apartadoText		
 	display block
 	font-size 1.5em
 	letter-spacing -2px
@@ -892,11 +894,15 @@ textarea
 	
 .prices-cuotaNumber
 .prices-getNumber
+.prices-apartadoNumber	
 	font-size 5em
 	font-weight bold
 	
-.modelos
+.models
 	text-align center
+	h1 
+		color azul
+		font-size 2.5rem
 
 .page-projectMedia
 	float right
@@ -926,19 +932,24 @@ textarea
 	.page-projectMedia
 		text-align right
 	.prices
-		overflow hidden
-		clear both
-	.prices-cuota
-		float left
-		margin-left 5rem 
-	.prices-get
-		float right	
+		min-height 250px
+		display flex 
+		flex-wrap wrap
+		justify-content space-around
+		//overflow hidden
+		//clear both
+	/*.prices-cuota
+		//float left
+		margin-left 1rem 
+	/*.prices-get
+		float right	*/
 @media screen and (min-width:1150px)
 	.page-projectMedia
 	.page-projectDetails
 		width 500px
 	.page-projectMedia
-		width 555px
+		width 650px//555px
+		padding-top 5rem
 .contact
 	border-bottom 13px solid azul
 	border-right 13px solid azul

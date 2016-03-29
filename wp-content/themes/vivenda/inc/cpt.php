@@ -92,6 +92,16 @@ function vivenda_register_meta_boxes( $meta_boxes )
                 
             ),
              array(
+                'name'  => 'Apartado con',
+                'id'    => $prefix . 'apartado',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'apartado'
+               
+               
+                
+            ),
+             array(
                 'name'  => 'Area(M2)',
                 'id'    => $prefix . 'area',
                 'type'  => 'text',

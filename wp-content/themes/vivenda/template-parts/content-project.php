@@ -55,6 +55,7 @@
         
 
         <div class="models">
+            <h1>Modelos de casas</h1>
             <?php $models = rwmb_meta( 'rw_project_model', 'type=image&size=large' ); 
              if ( $models ) {
                     $i = 0;
@@ -77,25 +78,23 @@
         </div>
     </div>
     <div class="page-projectMedia">
-        <!--<div class="plan-master">
-            <h2>Fotos</h2>
-            <?php 
-                $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=thumbnail' ); 
-                foreach ( $images as $image )
-                    {?>
-                       
-                        <a href="<?php echo $image['full_url'] ?>" data-effect="mfp-zoom-out">
-                            <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
-                        </a>
-
-                    <?php
-                      
-                     }
-                ?>
-            
-        </div>-->
+        
+        <div class="prices">
+            <div class="prices-get">
+                <span class="prices-getText">Precio desde:</span>
+                <span class="prices-getNumber">$<?php echo rwmb_meta( 'rw_price'); ?></span>
+            </div>
+            <div class="prices-cuota">
+                <span class="prices-cuotaText">Cuota desde:</span>
+                <span class="prices-cuotaNumber">$<?php echo rwmb_meta( 'rw_cuota'); ?></span>
+            </div>
+            <div class="prices-apartado">
+                <span class="prices-apartadoText">Separe la suya con:</span>
+                <span class="prices-apartadoNumber">$<?php echo rwmb_meta( 'rw_apartado'); ?></span>
+            </div>
+        </div>
         <div class="map">
-            <h2>Ubicación</h2>
+            
             <?php 
                 $args = array(
                     'type'         => 'map',
@@ -111,15 +110,6 @@
             <!--<img src="<?php echo get_template_directory_uri();  ?>/img/map.jpg" alt="mapa" />-->
         </div>
     </div>
-    <div class="prices">
-            <div class="prices-cuota">
-                <span class="prices-cuotaText">Precio desde</span>
-                <span class="prices-cuotaNumber">$<?php echo rwmb_meta( 'rw_price'); ?></span>
-            </div>
-            <div class="prices-get">
-                <span class="prices-getText">Su casa desde</span>
-                <span class="prices-getNumber"><?php echo rwmb_meta( 'rw_area'); ?></span>
-            </div>
-        </div>
+    
 
 </article><!-- #post-## -->
