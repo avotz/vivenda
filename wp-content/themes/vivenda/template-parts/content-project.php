@@ -32,28 +32,11 @@
                     the_title( '<h1 class="page-projectDetails-title">', '</h1>' ); 
               }
           ?>
+        <div class="description">
+            <?php the_content(); ?>
+        </div>
         
-        <?php the_content(); ?>
-
-        <?php /*the_title( '<h1>', '</h1>' ); */?>
-        <!--<dl class="details">
-            <dt class="btn btn-rojo">Información del lugar</dt>
-            <dd>
-            	<?php the_content(); ?>
-            </dd>
-            <dt class="btn btn-rojo">Características de lotes</dt>
-            <dd>
-                <?php echo rwmb_meta( 'rw_lot_info'); ?>
-            </dd>
-            <dt class="btn btn-rojo">Características de condominios</dt>
-            <dd>
-              <?php echo rwmb_meta( 'rw_condo_info'); ?>
-            </dd>
-            
-        </dl>-->
-        
-        
-
+        <span class="separator"></span>
         <div class="models">
             <h1>Modelos de casas</h1>
             <?php $models = rwmb_meta( 'rw_project_model', 'type=image&size=large' ); 
@@ -99,7 +82,7 @@
                 $args = array(
                     'type'         => 'map',
                     'width'        => '640px',
-                    'height'       => '480px',
+                    'height'       => '300px',
                     'js_options'   => array(
                         'mapTypeId'   => 'ROADMAP',
                         'zoomControl' => false,

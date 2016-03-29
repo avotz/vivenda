@@ -1122,7 +1122,7 @@ textarea {
 }
 .main {
   margin-bottom: 50px;
-  padding-top: 2.5rem;
+  padding-top: 1rem;
 }
 .home-iconContainer,
 .home-article {
@@ -1332,8 +1332,10 @@ textarea {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .projects {
+  .home .projects {
     margin-top: 50px;
+  }
+  .projects {
     text-align: left;
   }
 }
@@ -1549,6 +1551,17 @@ textarea {
 .page-projectDetails ul li {
   margin-bottom: 1rem;
 }
+.page-projectDetails .separator {
+  width: 100%;
+  height: 0;
+  border-bottom: 10px solid #2466ae;
+  display: inline-block;
+/*border-left: 250px solid transparent;
+		border-right: 250px solid transparent;
+		
+		border-bottom: 10px solid azul;
+		display inline-block*/
+}
 .page-projectDetails .corner {
   width: 0;
   height: 0;
@@ -1633,6 +1646,9 @@ textarea {
   color: #2466ae;
   font-size: 2.5rem;
 }
+.models a {
+  margin: 1.5rem;
+}
 .page-projectMedia {
   float: right;
 }
@@ -1665,11 +1681,20 @@ textarea {
   .page-projectDetails .corner {
     left: 15px;
   }
+  .page-projectMedia .separator,
+  .page-projectDetails .separator {
+    width: 0;
+    height: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 10px solid #2466ae;
+    display: inline-block;
+  }
   .page-projectMedia {
     text-align: right;
   }
   .prices {
-    min-height: 250px;
+    min-height: 290px;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -1688,6 +1713,9 @@ textarea {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     justify-content: space-around;
+  }
+  .description {
+    min-height: 230px;
   }
 }
 @media screen and (min-width: 1150px) {
@@ -1746,9 +1774,13 @@ textarea {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .home .banner,
+  .home .banner-slide {
+    height: 100vh;
+  }
   .banner,
   .banner-slide {
-    height: 100vh;
+    height: 450px;
   }
 }
 
