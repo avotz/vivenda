@@ -647,7 +647,6 @@ textarea {
   text-decoration: none;
   display: inline-block;
   padding: 16px 17px 15px 18px;
-  font: 16px 'Tinos';
   color: #fff;
   background: #f5c34c;
   border: none;
@@ -1181,7 +1180,8 @@ textarea {
     width: 340px;
   }
 }
-.home .projects-bg {
+.home .projects-bg,
+.single-projects .projects-bg {
   background-image: url("./img/banner3.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1361,6 +1361,7 @@ textarea {
   vertical-align: top;
   text-align: center;
   margin-left: 15px;
+  text-transform: uppercase;
 }
 .projects-title h2 {
   margin-bottom: 5px;

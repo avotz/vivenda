@@ -62,6 +62,7 @@ get_header(); ?>
 
 		</div><!-- #main -->
 </section><!-- #primary -->
-
-
+<?php if ( get_post_type( $post ) == 'projects' ) : ?>
+  <?php get_template_part( 'template-parts/content', 'projects-filters' ); ?>
+<?php endif; ?>
 <?php get_footer(); ?>
