@@ -49,7 +49,7 @@
                      <?php foreach ( $models as $model ){
                             $i++;
                         ?>
-                         <a href="<?php echo $model['url'] ?>" class="btn btn-naranja" title="model">Modelo <?php echo $i; ?></a>
+                         <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="model">Modelo <?php echo $i; ?></a>
                          
                       
                       <?php } 
@@ -57,7 +57,13 @@
       
               }
             ?>
-
+            <div class="models-note"> 
+              *Imagenes con fines ilustrativos, precios sujetos a disponibilidad. Cuota calculada con prima de 15%,
+                y es principal más intereses. No incluye seguros ni gastos. Cuota mensual calculada con una tasa de
+                6.5% a 30 años plazo. El precio corresponde a casas terminadas. Crédito otorgado por un tercero. 
+                Aprobación de crédito sujeta a análisis.
+            </div>
+  
         </div>
     </div>
     <div class="page-projectMedia">
