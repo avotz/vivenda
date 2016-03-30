@@ -148,16 +148,19 @@
     var $root = $('html, body');
     $('a.anchor').click(function(e) {
         var href = $.attr(this, 'href');
+
         if (typeof($(href)) != 'undefined' && $(href).length > 0) {
             var anchor = '';
 
             if (href.indexOf("#") != -1) {
                 anchor = href.substring(href.lastIndexOf("#"));
             }
-
+           
             if (anchor.length > 0) {
                 console.log($(anchor).offset().top);
                 console.log(anchor);
+
+
                 $root.animate({
                     scrollTop: $(anchor).offset().top-80
                 }, 500, function() {
@@ -165,6 +168,8 @@
                 });
                 e.preventDefault();
             }
+        }else{ // si no esta la seccion projects se va al home
+           window.location.replace('/' + href);
         }
     });
 
