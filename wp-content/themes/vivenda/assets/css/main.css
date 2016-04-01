@@ -910,7 +910,7 @@ textarea {
   transform: translate(0, -50%);
 }
 .banner-promo {
-  border-bottom: 5px solid #e96d09;
+  border-bottom: 6px solid #e96d09;
 }
 .banner-slide {
   background-position: center center;
@@ -1964,7 +1964,7 @@ textarea {
   }
 }
 @media screen and (min-width: 1250px) {
-  .photos img {
+  .page-promo .photos img {
     width: auto;
   }
 }
