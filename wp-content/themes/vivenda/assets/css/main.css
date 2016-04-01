@@ -623,6 +623,7 @@ p {
 }
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
   border: 1px solid #f3f3f3;
   width: 100%;
@@ -907,6 +908,9 @@ textarea {
   -o-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
+}
+.banner-promo {
+  border-bottom: 5px solid #e96d09;
 }
 .banner-slide {
   background-position: center center;
@@ -1798,6 +1802,170 @@ textarea {
 @media screen and (min-width: 768px) {
   .social-fixed {
     display: block;
+  }
+}
+.page-promo {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.page-promo b,
+.page-promo strong {
+  background-color: #2466ae;
+  color: #fff;
+  padding: 0 5px;
+}
+.page-promo ul {
+  list-style-image: url("./img/icon-check.png");
+  text-align: left;
+}
+.page-promo ul li {
+  margin-bottom: 1rem;
+  line-height: 28px;
+  margin-left: 30px;
+}
+.page-promo h1,
+.page-promo h2,
+.page-promo h3 {
+  color: #2466ae;
+}
+.page-promo-contact {
+  background-color: #2466ae;
+  color: #fff;
+  padding: 1.5rem;
+  max-width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -200px;
+/*.wpcf7-form
+			p
+				margin-bottom 8px*/
+}
+.page-promo-contact textarea {
+  height: 80px;
+}
+.page-promo-contact-info {
+  background-color: #e96d09;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.5rem;
+  text-align: center;
+}
+.page-promo-contact .info-confidential {
+  font-size: 12px;
+}
+.page-promo-logo {
+  margin-top: 1rem;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #2466ae;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.page-promo-logo img {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+.page-promo .description {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.page-promo .details,
+.page-promo .photos,
+.page-promo .location,
+.page-promo .promo-map {
+  display: inline-block;
+  vertical-align: top;
+}
+.page-promo .details {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.page-promo .photos {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.page-promo .photos img {
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.75);
+  padding: 0.5rem;
+  width: 225px;
+}
+.page-promo .location {
+  width: 100%;
+  text-align: center;
+  margin-right: 1rem;
+}
+.page-promo .location .btn {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+.page-promo .promo-map {
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.page-promo .promo-map .rwmb-map-canvas {
+  width: 100% !important;
+}
+@media screen and (min-width: 640px) {
+  .page-promo {
+    text-align: left;
+  }
+  .page-promo-contact {
+    margin-top: -400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-promo-logo {
+    float: left;
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page-promo-contact {
+    margin-right: 5rem;
+    float: right;
+  }
+  .page-promo .details {
+    width: 40%;
+  }
+  .page-promo .photos {
+    width: 55%;
+  }
+  .page-promo .photos img {
+    text-align: right;
+  }
+  .page-promo .location {
+    width: 35%;
+  }
+  .page-promo .promo-map {
+    width: 60%;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .photos img {
+    width: auto;
   }
 }
 @media only screen and (min-width: 1024px) {

@@ -59,6 +59,7 @@ p
 
 input[type="text"]
 input[type="email"]
+input[type="tel"]	
 textarea
 	border 1px solid #F3F3F3
 	width 100%
@@ -322,7 +323,9 @@ textarea
 		position absolute
 		left 0
 		top 50%
-		transform translate(0, -50%)	
+		transform translate(0, -50%)
+	&-promo
+		border-bottom 5px solid naranja	
 	
 .banner-slide
 	background-position center center
@@ -1028,6 +1031,143 @@ textarea
 			background-color rojo
 @media screen and (min-width:768px)
 	.social-fixed
-		display block			
+		display block
+
+.page-promo
+	text-align center
+	padding-left 1rem
+	padding-right 1rem
+	b
+	strong 
+		background-color azul
+		color white
+		padding 0 5px
+	ul
+		list-style-image url('./img/icon-check.png')
+		text-align left
+		
+		li 
+			margin-bottom 1rem
+			line-height 28px
+			margin-left 30px
+	h1
+	h2
+	h3
+		color azul
+	&-contact 
+		background-color azul
+		color white
+		padding 1.5rem
+		max-width 350px
+		//position relative
+		margin-right auto
+		margin-left auto
+		margin-top -200px
+		
+		textarea
+			height 80px
+		&-info
+			background-color naranja
+			color white
+			font-size 14px
+			padding .5rem
+			text-align center
+		.info-confidential
+			font-size 12px
+		/*.wpcf7-form
+			p
+				margin-bottom 8px*/
+			
+	&-logo 
+		//float left
+		margin-top 1rem
+		width 200px
+		height 200px
+		border 3px solid azul
+		margin-right auto//2.5rem
+		margin-left auto
+		border-radius 50%
+		position relative
+		text-align center
+		overflow hidden
+		img 
+			position relative
+			display inline-block
+			top 50%
+			transform translate(0%, -50%)
+	
+	.description
+		margin-top 1rem
+		margin-bottom 3rem
+	
+	.details
+	.photos
+	.location
+	.promo-map
+		display inline-block
+		vertical-align top
+		
+	.details
+		width 100%//40%
+		margin-bottom 3rem
+	.photos
+		width 100%//55% 
+		display inline-block
+		vertical-align top
+		text-align center
+		margin-bottom 1rem
+		img 
+			box-shadow 1px 1px 5px rgba(0,0,0,.75)
+			padding .5rem
+			width 225px
+	.location
+		width 100%//35%
+		text-align center
+		margin-right 1rem
+		.btn 
+			animation-duration: 1.5s;
+			//animation-delay: 2s;*/
+	.promo-map
+		width 100%//60%
+		box-shadow 1px 1px 10px rgba(0,0,0,.75)
+		padding .5rem
+		margin-top 1rem
+		.rwmb-map-canvas
+			width 100% !important
+@media screen and (min-width:640px)
+	.page-promo
+		text-align left		
+		&-contact
+			margin-top -400px
+			
+@media screen and (min-width:768px)
+	.page-promo
+		&-logo
+			float left
+			margin-right 2.5rem			
+@media screen and (min-width:1024px)
+	.page-promo		
+		&-contact
+			margin-right 5rem
+			float right
+		.details
+			width 40%
+			
+		.photos
+			width 55%
+			img  
+				text-align right
+
+		.location
+			width 35%
+			
+		.promo-map
+			width 60%
+			padding 1rem
+@media screen and (min-width:1250px)
+	.photos
+		img  
+			width auto
+			
 @import "responsive.styl"	
 

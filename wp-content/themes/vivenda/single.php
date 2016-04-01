@@ -6,6 +6,36 @@
  *
  * @package vivenda
  */
+if ( get_post_type( $post ) == 'promociones' ) : 
+  get_header('promo');
+
+         $images = rwmb_meta( 'rw_promo_thumb', 'type=image&size=large' ); 
+         if ( $images ) {?>
+            <section class="banner banner-promo">
+                <?php if ( has_post_thumbnail() ) :
+
+                $id = get_post_thumbnail_id($post->ID);
+                $thumb_url = wp_get_attachment_image_src($id,'full', true);
+                ?>
+                
+              <div class="banner-slide" style="background-image: url('<?php echo $thumb_url[0] ?>');"></div>
+                    
+            <?php endif; ?>
+                          
+                      </section>
+
+                   <?php         
+                        }?>
+  <section class="main">
+           <div class="inner">
+           <?php while ( have_posts() ) : the_post(); ?>
+                <?php get_template_part( 'template-parts/content', 'promocion' );?>
+          <?php endwhile; // End of the loop. ?>
+              
+          </div>
+  </section>
+ <?php
+ else :
 
 get_header(); ?>
 <?php 
@@ -47,7 +77,7 @@ get_header(); ?>
 			<?php if ( get_post_type( $post ) == 'projects' ) : ?>
 				<?php get_template_part( 'template-parts/content', 'project' ); ?>
 			
-			<?php else : ?>
+      <?php else : ?>
 				<div class="posts-area">
 					<?php get_template_part( 'template-parts/content', 'single' );
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -64,5 +94,8 @@ get_header(); ?>
 </section><!-- #primary -->
 <?php if ( get_post_type( $post ) == 'projects' ) : ?>
   <?php get_template_part( 'template-parts/content', 'projects-filters' ); ?>
-<?php endif; ?>
+<?php endif; 
+  
+endif;?>
+
 <?php get_footer(); ?>
