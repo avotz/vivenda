@@ -26,7 +26,7 @@
 <header class="header">
             <div class="inner">
                 <div class="menu-bg">
-                	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img class="header-logoImg" src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Inmobiliara" /></a>
+                	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img class="header-logoImg" src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Vivenda" /></a>
 	                <?php
 						wp_nav_menu(
 							 array(

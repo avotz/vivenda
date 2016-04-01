@@ -1829,6 +1829,10 @@ textarea {
 .page-promo h3 {
   color: #2466ae;
 }
+.page-promo .logo-vivenda {
+  width: 200px;
+  display: inline-block;
+}
 .page-promo-contact {
   background-color: #2466ae;
   color: #fff;
@@ -1942,6 +1946,11 @@ textarea {
   }
 }
 @media screen and (min-width: 1024px) {
+  .page-promo .logo-vivenda {
+    margin-right: 130px;
+    margin-top: -140px;
+    float: right;
+  }
   .page-promo-contact {
     margin-right: 5rem;
     float: right;

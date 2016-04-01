@@ -35,9 +35,11 @@
                     the_title( '<h1 class="page-promo-title">', '</h1>' ); 
               }
           ?>
-        <div class="description">
 
+        <div class="description">
+            
             <?php the_content();  ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-vivenda"><img class="header-logoImg" src="<?php echo get_template_directory_uri();  ?>/img/logo-color.png" alt="Vivenda" /></a>
         </div>
         <div class="details">
            <h2>Detalles del Proyecto</h2>
