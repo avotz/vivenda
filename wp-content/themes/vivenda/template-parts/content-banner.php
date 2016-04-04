@@ -1,18 +1,47 @@
 <section class="banner">
             <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>">
-                    <div class="banner-slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner.jpg');"><!--<span class="banner-tag"><img src="<?php echo get_template_directory_uri();  ?>/img/etiqueta-banner-paradise.png" alt="Vivenda"/></span>          
-                    <a href="#" class="banner-slide-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Vivenda"/></a> -->  
-                    </div>
-                    <div class="banner-slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner-2.jpg');"><!--<span class="banner-tag"><img src="<?php echo get_template_directory_uri();  ?>/img/etiqueta-banner-vista.png" alt="Vivenda"/></span>          
-                    <a href="#" class="banner-slide-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Vivenda"/></a> --> 
-                    </div>
-                    <div class="banner-slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner-3.jpg');"><!--<span class="banner-tag"><img src="<?php echo get_template_directory_uri();  ?>/img/etiqueta-banner-paradise.png" alt="Vivenda"/></span>          
-                    <a href="#" class="banner-slide-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Vivenda"/></a>-->   
-                    </div>
-                    <!--<div class="banner-slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner2.jpg');">             
-                    </div>
-                    <div class="banner-slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">             
-                    </div>-->
+                    
+                <?php
+                          $args = array(
+                            'post_type' => 'banners',
+                            
+                          );
+                          $projects = new WP_Query( $args );
+                          if( $projects->have_posts() ) {
+                            while( $projects->have_posts() ) {
+                              $projects->the_post();
+                             
+
+                              ?>
+                              <?php if ( has_post_thumbnail() ) :
+
+                                $id = get_post_thumbnail_id($post->ID);
+                                $thumb_url = wp_get_attachment_image_src($id,'full', true);
+                                ?>
+                                
+                              <div class="banner-slide" style="background-image: url('<?php echo $thumb_url[0] ?>');">
+                                    <div class="banner-info">
+                                        <span class="banner-text1">
+                                            <?php echo rwmb_meta( 'rw_text1'); ?>
+                                        </span>
+                                        <span class="banner-text2">
+                                            <?php echo rwmb_meta( 'rw_text2'); ?>
+                                        </span>
+                                    </div>
+                                    
+                              </div>
+                                    
+                            <?php endif; ?>
+                                 
+                                 
+                                
+                                
+                              <?php
+                            }
+                          }
+                        ?>
+
+                    
         
                     <div class="banner-pager"></div>
             </div>

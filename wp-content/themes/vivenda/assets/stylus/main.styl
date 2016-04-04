@@ -325,7 +325,28 @@ textarea
 		top 50%
 		transform translate(0, -50%)
 	&-promo
-		border-bottom 6px solid naranja	
+		border-bottom 6px solid naranja
+	&-info 
+		background-color rgba(0,0,0,.55)
+		padding 1rem
+		border 1px solid white
+		color white
+		display block
+		position absolute
+		left 10%
+		max-width 400px
+		top 30%
+		text-transform uppercase
+		
+		span 
+			display block
+			font-weight 700
+	&-text1
+		font-size 2rem
+		margin-bottom .5rem
+	&-text2
+		font-size 1.8rem	
+			
 	
 .banner-slide
 	background-position center center
@@ -604,6 +625,7 @@ textarea
 		width 100%
 		position relative
 		margin-bottom .8rem	
+		
 		&-link 
 			display block
 			&:before
@@ -716,7 +738,10 @@ textarea
 		
 .project-description
 	width 100%//240px
-	
+	p 
+		text-align left
+		padding-left 2rem
+		padding-right 2rem
 	.icon
 		background-color naranja
 		color white
@@ -754,7 +779,10 @@ textarea
 		
 	.project-description
 		width 240px
-		text-align left		
+		text-align left	
+		p
+			padding 0
+			
 			
 .number-contact
 	position relative

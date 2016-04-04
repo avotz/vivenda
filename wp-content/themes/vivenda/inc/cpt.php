@@ -72,6 +72,19 @@ function vivenda_register_meta_boxes( $meta_boxes )
                 
             ),
              array(
+                'name'  => 'Moneda',
+                'id'    => $prefix . 'coin',
+                'type'  => 'select',
+                'std'   => '',
+                'class' => 'coin',
+                'options' => array(
+                    '$' => 'Dolares',
+                    '₡' => 'Colones',
+                     )
+                
+                
+            ),
+             array(
                 'name'  => 'Precio',
                 'id'    => $prefix . 'price',
                 'type'  => 'text',
@@ -204,6 +217,40 @@ function vivenda_register_meta_boxes( $meta_boxes )
 
         )
     );
+
+    // Banners meta box
+    $meta_boxes[] = array(
+        'id'       => 'banners',
+        'title'    => 'Información Banners',
+        'pages'    => array('banners' ),
+        'context'  => 'normal',
+        'priority' => 'high',
+
+        'fields' => array(
+            
+              array(
+                'name'  => 'Texto #1',
+                'id'    => $prefix . 'text1',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'text1'
+               
+               
+                
+            ),
+             array(
+                'name'  => 'Texto #2',
+                'id'    => $prefix . 'text2',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'text2'
+               
+               
+                
+            ),
+            
+        )
+    );
     
 
 
@@ -329,3 +376,51 @@ function messagesPromociones( $messages ) {
   return $messages;
 }
 add_filter( 'post_updated_messages', 'messagesPromociones' );
+
+//custom post type services
+function my_custom_post_banners() {
+  $labels = array(
+    'name'               => _x( 'Banners', 'post type general name' ),
+    'singular_name'      => _x( 'Banner', 'post type singular name' ),
+    'add_new'            => _x( 'Add New', 'Banner' ),
+    'add_new_item'       => __( 'Add New Banner' ),
+    'edit_item'          => __( 'Edit Banner' ),
+    'new_item'           => __( 'New Banner' ),
+    'all_items'          => __( 'All Banners' ),
+    'view_item'          => __( 'View Banner' ),
+    'search_items'       => __( 'Search Banners' ),
+    'not_found'          => __( 'No Banners found' ),
+    'not_found_in_trash' => __( 'No Banners found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Banners'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Holds our Banners and Banner specific data',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    'has_archive'   => true,
+  );
+  register_post_type( 'banners', $args ); 
+}
+add_action( 'init', 'my_custom_post_banners' );
+
+function messagesBanners( $messages ) {
+  global $post, $post_ID;
+  $messages['banners'] = array(
+    0 => '', 
+    1 => sprintf( __('Banner updated. <a href="%s">View Banner</a>'), esc_url( get_permalink($post_ID) ) ),
+    2 => __('Custom field updated.'),
+    3 => __('Custom field deleted.'),
+    4 => __('Banner updated.'),
+    5 => isset($_GET['revision']) ? sprintf( __('Banner restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+    6 => sprintf( __('Banner published. <a href="%s">View Banner</a>'), esc_url( get_permalink($post_ID) ) ),
+    7 => __('Banner saved.'),
+    8 => sprintf( __('Banner submitted. <a target="_blank" href="%s">Preview Banner</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+    9 => sprintf( __('Banner scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Banner</a>'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+    10 => sprintf( __('Banner draft updated. <a target="_blank" href="%s">Preview Banner</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+  );
+  return $messages;
+}
+add_filter( 'post_updated_messages', 'messagesBanners' );
