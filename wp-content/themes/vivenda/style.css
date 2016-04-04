@@ -1758,8 +1758,8 @@ textarea {
   .page-projectDetails .separator {
     width: 0;
     height: 0;
-    border-left: 250px solid transparent;
-    border-right: 250px solid transparent;
+    border-left: 320px solid transparent;
+    border-right: 320px solid transparent;
     border-bottom: 10px solid #2466ae;
     display: inline-block;
   }
@@ -1767,7 +1767,7 @@ textarea {
     text-align: right;
   }
   .prices {
-    min-height: 290px;
+    min-height: 200px;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -1798,7 +1798,6 @@ textarea {
   }
   .page-projectMedia {
     width: 650px;
-    padding-top: 5rem;
   }
 }
 .contact {

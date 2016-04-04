@@ -35,7 +35,7 @@
                         <a href="#" class="footer-redesLink"><i class="icon-googleplus"></i></a>
                     </div>
             <div class="footer-contact">
-                <h2 class="number-contactTitle">Llámenos al <span class="number-contactNumber">8879-8893</span></h2>
+                <h2 class="number-contactTitle">Llámenos al:  <span class="number-contactNumber">8879-8893</span></h2>
                
             </div>
                 <!--<div class="footer-column footer-contact">
