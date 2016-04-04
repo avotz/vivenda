@@ -13,7 +13,7 @@
 
 	<div class="page-projectDetails">
         <span class="corner"></span>
-        <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
+        <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=medium' ); 
          if ( $images ) {?>
          
          
