@@ -1521,7 +1521,7 @@ textarea {
 .footer {
   background: #f3f3f3;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0;
   overflow: hidden;
   text-align: center;
 }
@@ -1572,6 +1572,21 @@ textarea {
 }
 .footer-logo img {
   width: 100%;
+}
+.copy {
+  background-color: #2466ae;
+  color: #fff;
+  font-size: 14px;
+}
+.copy a {
+  color: #fff;
+}
+.copy a:hover {
+  text-decoration: underline;
+}
+.copy i {
+  font-size: 1.5rem;
+  vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
   .footer-column {
@@ -1679,9 +1694,8 @@ textarea {
 .page-projectDetails ul {
   margin-left: 50px;
 }
-.prices {
-  margin-top: 40px;
-}
+/*.prices
+	margin-top 40px*/
 .prices-cuota,
 .prices-get,
 .prices-apartado {

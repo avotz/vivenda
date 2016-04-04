@@ -50,6 +50,9 @@
                     </div>
                 </div>-->
             </div>
+            <div class="copy">
+                Copyright 2016 &copy; <a href="https://www.avotz.com" target="_blank"><i class="icon-avotz"></i></a>. <a href="<?php echo esc_url( home_url( '/terminos-y-condiciones' ) ); ?>">Términos y condiciones</a>
+            </div>
         </footer>
 
 	</div><!-- #content -->
