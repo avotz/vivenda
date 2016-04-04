@@ -1687,6 +1687,7 @@ textarea {
 .prices-apartado {
   margin-bottom: 40px;
   padding-bottom: 20px;
+  padding: 0.5rem;
   text-align: center;
   color: #2466ae;
 }
