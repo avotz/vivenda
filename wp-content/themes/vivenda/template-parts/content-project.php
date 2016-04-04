@@ -38,14 +38,14 @@
         
         <span class="separator"></span>
         <div class="models">
-            <h1>Modelos de casas</h1>
+           
             <?php $models = rwmb_meta( 'rw_project_model', 'type=image&size=large' ); 
              if ( $models ) {
                     $i = 0;
                 ?>
              
                
-                        
+                     <h1>Modelos de casas</h1>
                      <?php foreach ( $models as $model ){
                             $i++;
                         ?>
