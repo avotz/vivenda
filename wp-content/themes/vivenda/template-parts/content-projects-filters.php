@@ -59,7 +59,7 @@
                           $args = array(
                             'post_type' => 'projects',
                             'paged' => $paged,
-                            'posts_per_page' => 50
+                            'posts_per_page' => -1
                             
                           );
                           $temp = $wp_query; 
