@@ -48,21 +48,34 @@
                 <div class="inner">
                 
                     <?php
+                          if ( get_query_var('paged') ) {
+                              $paged = get_query_var('paged');
+                          } else if ( get_query_var('page') ) {
+                              $paged = get_query_var('page');
+                          } else {
+                              $paged = 1;
+                          } 
+            
                           $args = array(
                             'post_type' => 'projects',
+                            'paged' => $paged,
+                            'posts_per_page' => 50
                             
                           );
-                          $projects = new WP_Query( $args );
-                          if( $projects->have_posts() ) {
-                            while( $projects->have_posts() ) {
-                              $projects->the_post();
+                          $temp = $wp_query; 
+                          $wp_query = null;
+                          $wp_query = new WP_Query( $args );
+
+                          if( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) :  $wp_query->the_post();
+                             
                               $terms = get_the_terms( $post->ID, 'category_project' );
+                             
                               if ( $terms && ! is_wp_error( $terms ) ) { 
                              
-                                foreach ( $terms as $term ) {
-                                    $categories[] = $term->name;
-                                }
-                            }
+                                  foreach ( $terms as $term ) {
+                                      $categories[] = $term->name;
+                                  }
+                              }
 
                               ?>
                                  
@@ -105,11 +118,20 @@
                                 </article>
                                 
                                 
-                              <?php
-                            }
-                          }
-                        ?>
+                               <?php endwhile; ?>
+                            <!-- post navigation -->
+                          
+
+                        <?php endif; ?>
                         
+                          <?php 
+                            $wp_query = null; 
+                            $wp_query = $temp;  // Reset
+                          ?>
+
+
+                    
+                            
                     
                 </div>
                 
