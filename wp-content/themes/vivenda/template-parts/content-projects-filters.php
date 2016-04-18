@@ -76,8 +76,8 @@
                                       $categories[] = $term->name;
                                   }
                               }
-
-                                $itemPrice = floatval(rwmb_meta( 'rw_price'));
+                                $currency = rwmb_meta( 'rw_coin');
+                                $itemPrice = ($currency == '₡') ? (floatval(rwmb_meta( 'rw_price') / 545)) : floatval(rwmb_meta( 'rw_price') );
                                 $rpItem = "";
                                   if($itemPrice >= 0 && $itemPrice <= 50000) $rpItem .= " rp1";
                                   if($itemPrice >= 50000 && $itemPrice <= 100000) $rpItem .= " rp2";
