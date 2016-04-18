@@ -22,6 +22,8 @@
             filters += '.'+ $('#category').val();
         if($('#province').val())
             filters += '.'+ $('#province').val();
+        if($('#price').val())
+            filters += '.'+ $('#price').val();
 
 
          if(filters)

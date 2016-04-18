@@ -77,9 +77,16 @@
                                   }
                               }
 
+                                $itemPrice = floatval(rwmb_meta( 'rw_price'));
+                                $rpItem = "";
+                                  if($itemPrice >= 0 && $itemPrice <= 50000) $rpItem .= " rp1";
+                                  if($itemPrice >= 50000 && $itemPrice <= 100000) $rpItem .= " rp2";
+                                  if($itemPrice >= 100000 && $itemPrice <= 200000) $rpItem .= " rp3";
+                                  if($itemPrice > 200000) $rpItem .= " rp4";
+
                               ?>
                                  
-                                 <article class="project mix <?php echo implode(' ', $categories);  ?> <?php echo rwmb_meta( 'rw_price'); ?> <?php echo rwmb_meta( 'rw_province'); ?>">
+                                 <article class="project mix <?php echo implode(' ', $categories);  ?> <?php echo $rpItem ?> <?php echo rwmb_meta( 'rw_province'); ?>">
                                     <div class="project-icon">
                                         <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
                                          if ( $images ) {?>

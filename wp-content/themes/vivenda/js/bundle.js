@@ -71,6 +71,8 @@ function(a){"use strict";a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"
             filters += '.'+ $('#category').val();
         if($('#province').val())
             filters += '.'+ $('#province').val();
+        if($('#price').val())
+            filters += '.'+ $('#price').val();
 
 
          if(filters)
