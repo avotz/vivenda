@@ -572,6 +572,12 @@ table {
 .icon-usd:before {
   content: "\f155";
 }
+.icon-$:before {
+  content: "\f155";
+}
+.icon-₡:before {
+  content: "₡";
+}
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 25px;

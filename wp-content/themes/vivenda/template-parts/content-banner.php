@@ -45,7 +45,7 @@
         
                     <div class="banner-pager"></div>
             </div>
-            <a href="#" class="adv" title="Consulta Aqui">
+            <a href="#contact" class="adv" title="Consulta Aqui">
                
                 <!--<span class="adv-1">
                     <span class="adv-title">Sin prima.. <br />Sin fiador.. <br />Coutas fijas..</span>

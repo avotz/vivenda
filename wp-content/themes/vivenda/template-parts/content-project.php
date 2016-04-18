@@ -59,15 +59,15 @@
         <div class="prices">
             <div class="prices-get">
                 <span class="prices-getText">Precio desde:</span>
-                <span class="prices-getNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo rwmb_meta( 'rw_price'); ?></span>
+                <span class="prices-getNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_price')), 0, ",", "."); ?></span>
             </div>
             <div class="prices-cuota">
                 <span class="prices-cuotaText">Cuota desde:</span>
-                <span class="prices-cuotaNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo rwmb_meta( 'rw_cuota'); ?></span>
+                <span class="prices-cuotaNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_cuota')), 0, ",", "."); ?></span>
             </div>
             <div class="prices-apartado">
                 <span class="prices-apartadoText">Separe la suya con:</span>
-                <span class="prices-apartadoNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo rwmb_meta( 'rw_apartado'); ?></span>
+                <span class="prices-apartadoNumber"><?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_apartado')), 0, ",", "."); ?></span>
             </div>
         </div>
          <span class="separator"></span>

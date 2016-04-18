@@ -30,10 +30,10 @@
                     <div class="projects-filter-item">
                         <select name="price" id="price">
                             <option value="">Precio</option>
-                            <option value="">De $100.000 a $200.000</option>
-                            <option value="">De $200.000 a $300.000</option>
-                            <option value="">De $300.000 a $400.000</option>
-                            <option value="">De $400.000 a $500.000</option>
+                            <option value="rp1">De $0 a $50.0000</option>
+                            <option value="rp2">De $50.000 a $100.000</option>
+                            <option value="rp3">De $100.000 a $200.000</option>
+                            <option value="rp4">Más de $200.000</option>
                             
                         </select>
                     </div>
@@ -108,9 +108,10 @@
                                          <p><i class="icon icon-mail"></i> info@vivendacr.com</p>
                                         <?php } ?>
                                         <?php if(rwmb_meta( 'rw_cuota')) { ?>
-                                         <p><i class="icon icon-calendar"></i> Cuota desde $<?php echo rwmb_meta( 'rw_cuota'); ?></p>
+                                         <p><i class="icon icon-calendar"></i> Cuota desde <?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_cuota')),0,",","."); ?></p>
                                         <?php } ?>
-                                        <p><i class="icon icon-dollar"></i> Desde $<?php echo rwmb_meta( 'rw_price'); ?></p>
+                                        <p><i class="icon icon-<?php echo (rwmb_meta( 'rw_coin') == '$') ? 'dollar': rwmb_meta( 'rw_coin'); ?>"></i> Desde <?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_price')), 0, ",", "."); ?>
+                                        </p>
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="project-link">Ver proyecto</a>
                                    
