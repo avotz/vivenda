@@ -139,7 +139,18 @@ function vivenda_register_meta_boxes( $meta_boxes )
               'std'           => '-6.233406,-35.049906,15',
               // Name of text field where address is entered. Can be list of text fields, separated by commas (for ex. city, state)
               'address_field' => $prefix . 'addressMap',
-            )
+            ),
+
+            array(
+                'name'  => 'Notes',
+                'id'    => $prefix . 'notes',
+                'type'  => 'textarea',
+                'std'   => '',
+                'class' => 'notes'
+               
+               
+                
+            ),
           
              
 

@@ -91,11 +91,9 @@
       
               }
             ?>
-            <div class="models-note"> 
-              *Imagenes con fines ilustrativos, precios sujetos a disponibilidad. Cuota calculada con prima de 15%,
-                y es principal más intereses. No incluye seguros ni gastos. Cuota mensual calculada con una tasa de
-                6.5% a 30 años plazo. El precio corresponde a casas terminadas. Crédito otorgado por un tercero. 
-                Aprobación de crédito sujeta a análisis.
+            <div class="models-note">
+              <?php echo rwmb_meta( 'rw_notes'); ?> 
+              
             </div>
   
         </div>
