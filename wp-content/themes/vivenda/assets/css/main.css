@@ -1763,6 +1763,13 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.files {
+  text-align: center;
+  margin-top: 1rem;
+}
+.files a {
+  display: inline-block;
+}
 @media screen and (min-width: 1024px) {
   .page-projectMedia,
   .page-projectDetails {

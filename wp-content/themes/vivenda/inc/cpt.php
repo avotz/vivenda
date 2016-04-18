@@ -151,6 +151,26 @@ function vivenda_register_meta_boxes( $meta_boxes )
                
                 
             ),
+            array(
+                'name'  => 'Archivos',
+                'desc'  => 'Files',
+                'id'    => $prefix . 'project_file',
+                'type'  => 'file_advanced',
+                'std'   => '',
+                'class' => 'files'
+                
+            ),
+             array(
+                'name'  => 'Video',
+                'id'    => $prefix . 'video',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'video'
+               
+               
+                
+            )
+            
           
              
 

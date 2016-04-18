@@ -51,6 +51,19 @@
             echo rwmb_meta( 'rw_map', $args); ?>
             <!--<img src="<?php echo get_template_directory_uri();  ?>/img/map.jpg" alt="mapa" />-->
         </div>
+        <div class="files">
+          <?php $files = rwmb_meta( 'rw_project_file' );              // Since 4.8.0
+              $files = rwmb_meta( 'rw_project_file', 'type=file' ); // Prior to 4.8.0
+              if ( !empty( $files ) ) {
+                  foreach ( $files as $file ) {
+                      echo "<a href='{$file['url']}' title='{$file['title']}' class='btn btn-naranja'>Ver PDF</a>";
+                  }
+              }
+          ?>
+          <?php if(rwmb_meta( 'rw_video')) : ?> 
+            <a href="<?php echo rwmb_meta( 'rw_video'); ?>" class="btn btn-naranja btn-video">Ver video</a>
+          <?php endif ?>
+        </div>
         
        
     </div>

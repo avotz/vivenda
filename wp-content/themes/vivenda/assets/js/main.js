@@ -164,6 +164,29 @@
        
     });
 
+     
+    
+   $('.btn-video').magnificPopup({
+        type: 'iframe',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
+
     // SMOOTH ANCHOR SCROLLING
     var $root = $('html, body');
     $('a.anchor').click(function(e) {
