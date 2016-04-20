@@ -85,25 +85,159 @@
         </div>
          <span class="separator"></span>
         <div class="models">
-           
-            <?php $models = rwmb_meta( 'rw_project_model', 'type=image&size=large' ); 
-             if ( $models ) {
-                    $i = 0;
-                ?>
-             
-               
-                     <h1>Modelos de casas</h1>
-                     <?php foreach ( $models as $model ){
-                            $i++;
-                        ?>
-                         <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="model">Modelo <?php echo $i; ?></a>
-                         
+            <h1>Modelos de casas</h1>
+            
+                <?php $models = rwmb_meta( 'rw_project_model', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
                       
-                      <?php } 
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 1 - <?php echo $i; ?>" >Modelo 1</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 1 - <?php echo $i; ?>" ></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
+            
+            <?php $models = rwmb_meta( 'rw_project_model_2', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
+                      
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 2- <?php echo $i; ?>">Modelo 2</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 2 - <?php echo $i; ?>"></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
 
-      
-              }
-            ?>
+              <?php $models = rwmb_meta( 'rw_project_model_3', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
+                      
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 3 - <?php echo $i; ?>">Modelo 3</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 3 - <?php echo $i; ?>"></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
+
+              <?php $models = rwmb_meta( 'rw_project_model_4', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
+                      
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 4 - <?php echo $i; ?>">Modelo 4</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 4 - <?php echo $i; ?>"></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
+
+              <?php $models = rwmb_meta( 'rw_project_model_5', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
+                      
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 5 - <?php echo $i; ?>">Modelo 5</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 5 - <?php echo $i; ?>"></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
+
+              <?php $models = rwmb_meta( 'rw_project_model_6', 'type=image&size=large' );
+            
+               if ( $models ) {
+                      $i = 0;
+                  ?>
+                  <div class="gallery">
+                 
+                      
+                       <?php foreach ( $models as $model ){
+                              $i++;
+                          
+                           if ( $i == 1 ) {?>
+                              
+                              <a href="<?php echo $model['url'] ?>" class="btn btn-model" title="Modelo 6 - <?php echo $i; ?>">Modelo 6</a>
+                           
+                           <?php }else { ?>
+                              <a href="<?php echo $model['url'] ?>" title="Modelo 6 - <?php echo $i; ?>"></a>
+                        <?php }
+                      } ?>
+                  </div>
+                    
+            <?php   
+             }
+              ?>
+
+            
             <div class="models-note">
               <?php echo rwmb_meta( 'rw_notes'); ?> 
               

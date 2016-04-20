@@ -35,15 +35,73 @@ function vivenda_register_meta_boxes( $meta_boxes )
                 'class' => 'custom-class'
                 
             ),
-             array(
-                'name'  => 'Fotos de Modelos',
+              array(
+                'name'  => 'Fotos de Modelo 1 ',
                 'desc'  => 'Format: Image File',
                 'id'    => $prefix . 'project_model',
                 'type'  => 'image_advanced',
                 'std'   => '',
                 'class' => 'models'
                 
+                
+                
             ),
+             array(
+                'name'  => 'Fotos de Modelo 2 ',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_model_2',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'models'
+                
+                
+                
+            ),
+             array(
+                'name'  => 'Fotos de Modelo 3 ',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_model_3',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'models'
+                
+                
+                
+            ),
+             array(
+                'name'  => 'Fotos de Modelo 4 ',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_model_4',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'models'
+                
+                
+                
+            ),
+             array(
+                'name'  => 'Fotos de Modelo 5 ',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_model_5',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'models'
+                
+                
+                
+            ),
+             array(
+                'name'  => 'Fotos de Modelo 6 ',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_model_6',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'models'
+                
+                
+                
+            ),
+
               array(
                 'name'  => 'Provincia',
                 'id'    => $prefix . 'province',

@@ -1728,6 +1728,10 @@ textarea {
 .models {
   text-align: center;
 }
+.models .gallery {
+  display: inline-block;
+  vertical-align: top;
+}
 .models h1 {
   color: #2466ae;
   font-size: 2.5rem;
