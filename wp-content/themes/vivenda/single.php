@@ -39,7 +39,7 @@ if ( get_post_type( $post ) == 'promociones' ) :
 
 get_header(); ?>
 <?php 
-         $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=large' ); 
+         $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=full' ); 
          if ( $images ) {?>
             <section class="banner">
                 <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>">
