@@ -1748,9 +1748,8 @@ textarea {
 .page-projectDetails ul {
   margin-left: 50px;
 }
-.prices {
-  margin-top: 40px;
-}
+/*.prices
+	margin-top 100px*/
 .prices-cuota,
 .prices-get,
 .prices-apartado {
@@ -1878,6 +1877,7 @@ textarea {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     justify-content: space-around;
+    margin-top: 100px;
   }
   .description {
     min-height: 230px;
