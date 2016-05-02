@@ -1693,9 +1693,13 @@ textarea {
 .page-projectDetails-logo {
   text-align: left;
   width: 300px;
+  max-height: 150px;
   margin-top: 25px;
   margin-left: 65px;
   margin-bottom: 20px;
+}
+.page-projectDetails-logo img {
+  width: 100%;
 }
 .page-projectDetails-title {
   line-height: 115px;
