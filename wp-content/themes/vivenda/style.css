@@ -495,16 +495,16 @@ table {
   border-spacing: 0;
 }
 @font-face {
-  font-family: 'inmobiliaria';
-  src: url("./fonts/inmobiliaria.eot?va5ws8");
-  src: url("./fonts/inmobiliaria.eot?va5ws8#iefix") format('embedded-opentype'), url("./fonts/inmobiliaria.ttf?va5ws8") format('truetype'), url("./fonts/inmobiliaria.woff?va5ws8") format('woff'), url("./fonts/inmobiliaria.svg?va5ws8#inmobiliaria") format('svg');
+  font-family: 'icomoon';
+  src: url("./fonts/icomoon.eot?j5yd7m");
+  src: url("./fonts/icomoon.eot?j5yd7m#iefix") format('embedded-opentype'), url("./fonts/icomoon.ttf?j5yd7m") format('truetype'), url("./fonts/icomoon.woff?j5yd7m") format('woff'), url("./fonts/icomoon.svg?j5yd7m#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
 /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'inmobiliaria' !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -568,6 +568,15 @@ table {
 }
 .icon-dollar:before {
   content: "\f155";
+}
+.icon-download:before {
+  content: "\e900";
+}
+.icon-youtube:before {
+  content: "\e901";
+}
+.icon-youtube2:before {
+  content: "\e902";
 }
 .icon-usd:before {
   content: "\f155";
@@ -943,6 +952,23 @@ textarea {
 .banner-text2 {
   font-size: 1.8em;
 }
+.banner-logo {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  max-width: 300px;
+  padding: 0.5rem;
+}
+.banner .restricciones {
+  display: none;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #fff;
+  font-weight: 800;
+}
 .banner-slide {
   background-position: center center;
   background-repeat: no-repeat;
@@ -974,6 +1000,12 @@ textarea {
   .banner-info span,
   .banner-slide-info span {
     line-height: 34px;
+  }
+}
+@media screen and (min-width: 860px) {
+  .banner-logo,
+  .banner .restricciones {
+    display: block;
   }
 }
 @media screen and (min-width: 900px) {
@@ -1722,7 +1754,7 @@ textarea {
 .prices-cuotaNumber,
 .prices-getNumber,
 .prices-apartadoNumber {
-  font-size: 5em;
+  font-size: 3.5em;
   font-weight: bold;
 }
 .models {
@@ -1773,6 +1805,18 @@ textarea {
 }
 .files a {
   display: inline-block;
+  color: #2466ae;
+  font-weight: 800;
+  margin: 0 0.5rem 1rem;
+  outline: none;
+}
+.files a:hover {
+  color: #d24f41;
+}
+.files i {
+  color: #d24f41;
+  font-size: 2rem;
+  vertical-align: middle;
 }
 @media screen and (min-width: 1024px) {
   .page-projectMedia,
@@ -1798,7 +1842,7 @@ textarea {
     text-align: right;
   }
   .prices {
-    min-height: 200px;
+    min-height: 190px;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;

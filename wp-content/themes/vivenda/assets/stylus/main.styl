@@ -347,7 +347,23 @@ textarea
 		font-size 2.5em
 		margin-bottom .5rem
 	&-text2
-		font-size 1.8em	
+		font-size 1.8em
+	&-logo
+		display none 
+		position absolute
+		bottom 0
+		right 0
+		background-color white
+		max-width 300px
+		padding .5rem
+	.restricciones
+		display none
+		position absolute
+		bottom 1rem
+		left 1rem 
+		color white
+		font-weight 800
+		
 			
 
 	
@@ -375,7 +391,13 @@ textarea
 			font-size 20px
 			span
 				line-height 34px
-	
+
+@media screen and (min-width:860px)
+	.banner 
+		&-logo
+		.restricciones
+			display block 
+		
 @media screen and (min-width:900px)
 	.banner
 		&-tag 
@@ -972,7 +994,7 @@ textarea
 .prices-cuotaNumber
 .prices-getNumber
 .prices-apartadoNumber	
-	font-size 5em
+	font-size 3.5em
 	font-weight bold
 	
 .models
@@ -1012,8 +1034,22 @@ textarea
 .files
 	text-align center
 	margin-top 1rem 
+	
 	a 
 		display inline-block
+		color azul
+		font-weight 800
+		margin 0 .5rem 1rem
+		outline none
+		&:hover 
+			color rojo
+			
+	i
+		color rojo
+		font-size 2rem
+		vertical-align middle
+		
+		
 		 
 @media screen and (min-width:1024px)
 	.page-projectMedia
@@ -1035,7 +1071,7 @@ textarea
 	.page-projectMedia
 		text-align right
 	.prices
-		min-height 200px
+		min-height 190px
 		display flex 
 		flex-wrap wrap
 		justify-content space-around

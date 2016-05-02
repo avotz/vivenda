@@ -28,7 +28,22 @@
                                             <?php echo rwmb_meta( 'rw_text2'); ?>
                                         </span>
                                     </div>
-                                    
+                                   <?php $images = rwmb_meta( 'rw_banner_logo', 'type=image&size=medium' ); 
+                                   if ( $images ) {?>
+                                   
+                                   
+                                      <div class="banner-logo">
+                                           <?php foreach ( $images as $image ){?>
+                                               
+                                               <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
+                                            
+                                            <?php } ?>
+
+                                           
+                                      </div>
+
+                                  <?php } ?>
+                                    <span class="restricciones">*Aplican restricciones para cada caso</span>
                               </div>
                                     
                             <?php endif; ?>

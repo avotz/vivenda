@@ -317,6 +317,15 @@ function vivenda_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             
+               array(
+                'name'  => 'Logo del proyecto',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'banner_logo',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'custom-class'
+                
+            ),
               array(
                 'name'  => 'Texto #1',
                 'id'    => $prefix . 'text1',
