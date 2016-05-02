@@ -1748,8 +1748,9 @@ textarea {
 .page-projectDetails ul {
   margin-left: 50px;
 }
-/*.prices
-	margin-top 40px*/
+.prices {
+  margin-top: 40px;
+}
 .prices-cuota,
 .prices-get,
 .prices-apartado {
