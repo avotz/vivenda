@@ -1693,10 +1693,20 @@ textarea {
 .page-projectDetails-logo {
   text-align: left;
   width: 300px;
-  max-height: 150px;
+  max-height: 90px;
   margin-top: 25px;
   margin-left: 65px;
   margin-bottom: 20px;
+}
+.page-projectDetails-logo span {
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+  width: 100%;
+  display: block;
+  height: 90px;
 }
 .page-projectDetails-logo img {
   width: 100%;

@@ -20,8 +20,8 @@
             <div class="page-projectDetails-logo">
                  <?php foreach ( $images as $image ){?>
                      
-                     <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
-                  
+                     <!--<img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />-->
+                      <span style="background-image: url('<?php echo $image['url'] ?>');"></span>
                   <?php } ?>
 
                  
