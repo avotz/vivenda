@@ -1660,6 +1660,10 @@ textarea {
   vertical-align: top;
   width: 100%;
 }
+.page-projectMedia .row,
+.page-projectDetails .row {
+  min-height: 150px;
+}
 .page-projectDetails {
   text-align: left;
 }
