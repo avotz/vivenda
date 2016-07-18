@@ -1,15 +1,19 @@
 <section class="banner">
-            <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>">
+            <div class='center'>
+                <span id=prev-banner><i class="icon-arrow-left"></i></span>
+                <span id=next-banner> <i class="icon-arrow-right"></i></span>
+            </div>
+            <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>" data-cycle-prev="#prev-banner"    data-cycle-next="#next-banner">
                     
                 <?php
                           $args = array(
                             'post_type' => 'banners',
                             
                           );
-                          $projects = new WP_Query( $args );
-                          if( $projects->have_posts() ) {
-                            while( $projects->have_posts() ) {
-                              $projects->the_post();
+                          $banners = new WP_Query( $args );
+                          if( $banners->have_posts() ) {
+                            while( $banners->have_posts() ) {
+                              $banners->the_post();
                              
 
                               ?>
@@ -21,12 +25,53 @@
                                 
                               <div class="banner-slide" style="background-image: url('<?php echo $thumb_url[0] ?>');">
                                     <div class="banner-info">
-                                        <span class="banner-text1">
-                                            <?php echo rwmb_meta( 'rw_text1'); ?>
-                                        </span>
+                                        <!--<span class="banner-text1">
+                                            <?php /*echo rwmb_meta( 'rw_text1');*/ ?>
+                                        <!--</span>
                                         <span class="banner-text2">
-                                            <?php echo rwmb_meta( 'rw_text2'); ?>
-                                        </span>
+                                            <?php /*echo rwmb_meta( 'rw_text2');*/ ?>
+                                        <!--</span>-->
+                                        <?php 
+                                        $project_id = rwmb_meta( 'rw_project_select'); 
+                                         if ( $project_id ) {
+                                         $args = array(
+                                            'post_type' => 'projects',
+                                            'p' => rwmb_meta( 'rw_project_select')
+                                          );
+                                          
+                                          $projects = new WP_Query( $args );
+                                        
+                                          if( $projects->have_posts() ) {
+                                              while( $projects->have_posts() ) {
+                                                 $projects->the_post();
+
+                                                        ?>
+                                                        <article class="project">
+                                                           
+                                                            <div class="project-description">
+                                                                <h3 class="project-title"><?php the_title(); ?></h3>
+
+                                                                <p><i class="icon icon-map-marker"></i> <?php echo rwmb_meta( 'rw_zone'); ?>, <?php echo rwmb_meta( 'rw_province'); ?></p>
+                                                                <?php if(rwmb_meta( 'rw_contact')) { ?>
+                                                                 <p><i class="icon icon-mail"></i> info@vivendacr.com</p>
+                                                                <?php } ?>
+                                                                <?php if(rwmb_meta( 'rw_cuota')) { ?>
+                                                                 <p><i class="icon icon-calendar"></i> Cuota desde <?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_cuota')),0,",","."); ?></p>
+                                                                <?php } ?>
+                                                                <p><i class="icon icon-<?php echo (rwmb_meta( 'rw_coin') == '$') ? 'dollar': rwmb_meta( 'rw_coin'); ?>"></i> Desde <?php echo rwmb_meta( 'rw_coin'); ?><?php echo number_format(floatval(rwmb_meta( 'rw_price')), 0, ",", "."); ?>
+                                                                </p>
+                                                            </div>
+                                                            <a href="<?php the_permalink(); ?>" class="project-link">Más Detalles</a>
+                                                           
+                                                           
+                                                        </article>
+
+                                                      <?php
+                                                          } // cierre while post
+                                                        } // cierre if have posts
+                                            } // cierre if de project_id
+                                            ?>
+
                                     </div>
                                    <?php $images = rwmb_meta( 'rw_banner_logo', 'type=image&size=medium' ); 
                                    if ( $images ) {?>

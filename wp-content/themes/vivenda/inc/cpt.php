@@ -346,6 +346,18 @@ function vivenda_register_meta_boxes( $meta_boxes )
                
                 
             ),
+             array(
+                'name'  => 'Proyecto',
+                'id'    => $prefix . 'project_select',
+                'type'  => 'post',
+                'post_type' => 'projects',
+                'field_type' => 'select',
+                'std'   => '',
+                'class' => 'project_select'
+               
+               
+                
+            ),
             
         )
     );
@@ -522,3 +534,5 @@ function messagesBanners( $messages ) {
   return $messages;
 }
 add_filter( 'post_updated_messages', 'messagesBanners' );
+
+
