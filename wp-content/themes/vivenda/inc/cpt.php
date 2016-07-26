@@ -182,8 +182,18 @@ function vivenda_register_meta_boxes( $meta_boxes )
                
                 
             ),
+              array(
+                'name'  => 'Ubicación',
+                'id'    => $prefix . 'location',
+                'type'  => 'textarea',
+                'std'   => '',
+                'class' => 'location'
+
+                
+                
+            ),
              // Map requires at least one address field (with type = text)
-            array(
+           /* array(
               'id'   => $prefix . 'addressMap',
               'name' =>  'Dirección (Mapa)',
               'type' => 'text',
@@ -197,6 +207,35 @@ function vivenda_register_meta_boxes( $meta_boxes )
               'std'           => '-6.233406,-35.049906,15',
               // Name of text field where address is entered. Can be list of text fields, separated by commas (for ex. city, state)
               'address_field' => $prefix . 'addressMap',
+            ),*/
+             array(
+                'name'  => 'Mapa',
+                'desc'  => 'Format: Image File',
+                'id'    => $prefix . 'project_map',
+                'type'  => 'image_advanced',
+                'std'   => '',
+                'class' => 'custom-class'
+                
+            ),
+              array(
+                'name'  => 'Enlace google Maps',
+                'id'    => $prefix . 'google_maps',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'google_maps'
+               
+               
+                
+            ),
+               array(
+                'name'  => 'Enlace Waze',
+                'id'    => $prefix . 'waze',
+                'type'  => 'text',
+                'std'   => '',
+                'class' => 'waze'
+               
+               
+                
             ),
 
             array(

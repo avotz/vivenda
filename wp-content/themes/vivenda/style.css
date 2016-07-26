@@ -710,24 +710,34 @@ textarea {
 .btn-filter {
   padding: 7px 17px 7px 18px;
 }
+/*.btn-model
+	background-image url('./img/bg-btn-models.png');
+	background-repeat no-repeat
+	background-color transparent
+	background-size contain
+	color azul
+	font-weight 700
+	font-size 1.5rem
+	padding 22px 25px
+	text-transform none
+	&:hover 
+		background url('./img/bg-btn-models.png') no-repeat transparent;
+		background-size contain*/
 .btn-model {
-  background-image: url("./img/bg-btn-models.png");
   background-repeat: no-repeat;
   background-color: transparent;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
-  color: #2466ae;
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 22px 25px;
-  text-transform: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: inline-block;
+  width: 240px;
+  height: 166px;
 }
-.btn-model:hover {
-  background: url("./img/bg-btn-models.png") no-repeat transparent;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+@media screen and (min-width: 1250px) {
+  .btn-model {
+    width: 316px;
+    height: 216px;
+  }
 }
 .home .header {
   position: absolute;
@@ -1230,6 +1240,8 @@ textarea {
 .main {
   margin-bottom: 50px;
   padding-top: 1rem;
+  position: relative;
+  z-index: 999;
 }
 .home-iconContainer,
 .home-article {
@@ -1784,7 +1796,7 @@ textarea {
 .prices-cuotaNumber,
 .prices-getNumber,
 .prices-apartadoNumber {
-  font-size: 3.5em;
+  font-size: 2.8em;
   font-weight: bold;
 }
 .models {
@@ -1872,7 +1884,6 @@ textarea {
     text-align: right;
   }
   .prices {
-    min-height: 190px;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -1891,7 +1902,7 @@ textarea {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     justify-content: space-around;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .description {
     min-height: 230px;
@@ -1951,61 +1962,78 @@ textarea {
     display: block;
   }
 }
-.page-promo {
+.type-projects {
+  overflow: visible;
+}
+.page-promo,
+.page-project {
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 .page-promo b,
-.page-promo strong {
+.page-project b,
+.page-promo strong,
+.page-project strong {
   background-color: #2466ae;
   color: #fff;
   padding: 0 5px;
 }
-.page-promo ul {
+.page-promo ul,
+.page-project ul {
   list-style-image: url("./img/icon-check.png");
   text-align: left;
 }
-.page-promo ul li {
+.page-promo ul li,
+.page-project ul li {
   margin-bottom: 1rem;
   line-height: 28px;
   margin-left: 30px;
 }
 .page-promo h1,
+.page-project h1,
 .page-promo h2,
-.page-promo h3 {
+.page-project h2,
+.page-promo h3,
+.page-project h3 {
   color: #2466ae;
 }
-.page-promo .logo-vivenda {
+.page-promo .logo-vivenda,
+.page-project .logo-vivenda {
   width: 200px;
   display: inline-block;
 }
-.page-promo-contact {
+.page-promo-contact,
+.page-project-contact {
   background-color: #2466ae;
   color: #fff;
   padding: 1.5rem;
   max-width: 350px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: -200px;
+  margin-top: 20px;
 /*.wpcf7-form
 			p
 				margin-bottom 8px*/
 }
-.page-promo-contact textarea {
+.page-promo-contact textarea,
+.page-project-contact textarea {
   height: 80px;
 }
-.page-promo-contact-info {
+.page-promo-contact-info,
+.page-project-contact-info {
   background-color: #e96d09;
   color: #fff;
   font-size: 14px;
   padding: 0.5rem;
   text-align: center;
 }
-.page-promo-contact .info-confidential {
+.page-promo-contact .info-confidential,
+.page-project-contact .info-confidential {
   font-size: 12px;
 }
-.page-promo-logo {
+.page-promo-logo,
+.page-project-logo {
   margin-top: 1rem;
   width: 200px;
   height: 200px;
@@ -2017,8 +2045,10 @@ textarea {
   position: relative;
   text-align: center;
   overflow: hidden;
+  background-color: #fff;
 }
-.page-promo-logo img {
+.page-promo-logo img,
+.page-project-logo img {
   position: relative;
   display: inline-block;
   top: 50%;
@@ -2028,99 +2058,144 @@ textarea {
   -ms-transform: translate(0%, -50%);
   transform: translate(0%, -50%);
 }
-.page-promo .description {
+.page-promo .description,
+.page-project .description {
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
 .page-promo .details,
+.page-project .details,
 .page-promo .photos,
+.page-project .photos,
 .page-promo .location,
-.page-promo .promo-map {
+.page-project .location,
+.page-promo .promo-map,
+.page-project .promo-map {
   display: inline-block;
   vertical-align: top;
 }
-.page-promo .details {
+.page-promo .details,
+.page-project .details {
   width: 100%;
   margin-bottom: 3rem;
 }
-.page-promo .photos {
+.page-promo .photos,
+.page-project .photos {
   width: 100%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
   margin-bottom: 1rem;
 }
-.page-promo .photos img {
+.page-promo .photos img,
+.page-project .photos img {
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.75);
   box-shadow: 1px 1px 5px rgba(0,0,0,0.75);
   padding: 0.5rem;
   width: 225px;
 }
-.page-promo .location {
+.page-promo .photos .gallery,
+.page-project .photos .gallery {
+  display: inline-block;
+  vertical-align: top;
+}
+.page-promo .location,
+.page-project .location {
   width: 100%;
   text-align: center;
   margin-right: 1rem;
 }
-.page-promo .location .btn {
+.page-promo .location .btn,
+.page-project .location .btn {
   -webkit-animation-duration: 1.5s;
   -moz-animation-duration: 1.5s;
   -o-animation-duration: 1.5s;
   -ms-animation-duration: 1.5s;
   animation-duration: 1.5s;
 }
-.page-promo .promo-map {
+.page-promo .promo-map,
+.page-project .promo-map {
   width: 100%;
   -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
   box-shadow: 1px 1px 10px rgba(0,0,0,0.75);
   padding: 0.5rem;
   margin-top: 1rem;
+  position: relative;
 }
-.page-promo .promo-map .rwmb-map-canvas {
+.page-promo .promo-map .btns,
+.page-project .promo-map .btns {
+  position: absolute;
+  right: 1rem;
+}
+.page-promo .promo-map .btns a,
+.page-project .promo-map .btns a {
+  font-size: 12px;
+  padding: 0.5rem;
+}
+.page-promo .promo-map img,
+.page-project .promo-map img {
+  display: block;
+  width: 100%;
+}
+.page-promo .promo-map .rwmb-map-canvas,
+.page-project .promo-map .rwmb-map-canvas {
   width: 100% !important;
 }
 @media screen and (min-width: 640px) {
-  .page-promo {
+  .page-promo,
+  .page-project {
     text-align: left;
-  }
-  .page-promo-contact {
-    margin-top: -400px;
+/*&-contact
+			margin-top -460px//-400px*/
   }
 }
 @media screen and (min-width: 768px) {
-  .page-promo-logo {
+  .page-promo-logo,
+  .page-project-logo {
     float: left;
     margin-right: 2.5rem;
+    margin-top: -20rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .page-promo .logo-vivenda {
+  .page-promo .logo-vivenda,
+  .page-project .logo-vivenda {
     margin-right: 130px;
     margin-top: -140px;
     float: right;
   }
-  .page-promo-contact {
-    margin-right: 5rem;
-    float: right;
+  .page-promo-contact,
+  .page-project-contact {
+    position: absolute;
+    right: 5rem;
+    top: 0;
+    margin-top: -460px;
   }
-  .page-promo .details {
+  .page-promo .details,
+  .page-project .details {
     width: 40%;
   }
-  .page-promo .photos {
+  .page-promo .photos,
+  .page-project .photos {
     width: 55%;
   }
-  .page-promo .photos img {
+  .page-promo .photos img,
+  .page-project .photos img {
     text-align: right;
   }
-  .page-promo .location {
+  .page-promo .location,
+  .page-project .location {
     width: 35%;
   }
-  .page-promo .promo-map {
+  .page-promo .promo-map,
+  .page-project .promo-map {
     width: 60%;
     padding: 1rem;
   }
 }
 @media screen and (min-width: 1250px) {
-  .page-promo .photos img {
+  .page-promo .photos img,
+  .page-project .photos img {
     width: auto;
   }
 }

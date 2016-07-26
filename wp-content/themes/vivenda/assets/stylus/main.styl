@@ -120,7 +120,7 @@ textarea
 		background azul
 .btn-filter
 	padding 7px 17px 7px 18px
-.btn-model
+/*.btn-model
 	background-image url('./img/bg-btn-models.png');
 	background-repeat no-repeat
 	background-color transparent
@@ -132,7 +132,18 @@ textarea
 	text-transform none
 	&:hover 
 		background url('./img/bg-btn-models.png') no-repeat transparent;
-		background-size contain
+		background-size contain*/
+.btn-model
+	background-repeat no-repeat
+	background-color transparent
+	background-size cover
+	display inline-block
+	width 240px
+	height 166px
+@media screen and (min-width:1250px)
+	.btn-model
+		width 316px
+		height 216px
 .home 
 	.header
 		position absolute //fixed
@@ -567,6 +578,8 @@ textarea
 .main 
 	margin-bottom 50px
 	padding-top 1rem//2.5rem //6rem
+	position relative
+	z-index 999
 .home-iconContainer
 .home-article
 	display inline-block
@@ -1020,7 +1033,7 @@ textarea
 .prices-cuotaNumber
 .prices-getNumber
 .prices-apartadoNumber	
-	font-size 3.5em
+	font-size 2.8em
 	font-weight bold
 	
 .models
@@ -1097,11 +1110,11 @@ textarea
 	.page-projectMedia
 		text-align right
 	.prices
-		min-height 190px
+		//min-height 190px
 		display flex 
 		flex-wrap wrap
 		justify-content space-around
-		margin-top 100px
+		margin-top 50px
 	.description 
 		min-height 230px
 		//overflow hidden
@@ -1153,7 +1166,11 @@ textarea
 	.social-fixed
 		display block
 
+
+.type-projects
+	overflow visible
 .page-promo
+.page-project
 	text-align center
 	padding-left 1rem
 	padding-right 1rem
@@ -1188,7 +1205,7 @@ textarea
 		//position relative
 		margin-right auto
 		margin-left auto
-		margin-top -200px
+		margin-top 20px//-200px
 		
 		textarea
 			height 80px
@@ -1216,6 +1233,7 @@ textarea
 		position relative
 		text-align center
 		overflow hidden
+		background-color white
 		img 
 			position relative
 			display inline-block
@@ -1246,6 +1264,9 @@ textarea
 			box-shadow 1px 1px 5px rgba(0,0,0,.75)
 			padding .5rem
 			width 225px
+		.gallery
+			display inline-block
+			vertical-align top
 	.location
 		width 100%//35%
 		text-align center
@@ -1258,28 +1279,47 @@ textarea
 		box-shadow 1px 1px 10px rgba(0,0,0,.75)
 		padding .5rem
 		margin-top 1rem
+		position relative
+		.btns
+			position absolute
+			right 1rem
+			a 
+				font-size 12px 
+				padding .5rem
+		img 
+			display block
+			width 100%
 		.rwmb-map-canvas
 			width 100% !important
 @media screen and (min-width:640px)
 	.page-promo
+	.page-project	
 		text-align left		
-		&-contact
-			margin-top -400px
+		/*&-contact
+			margin-top -460px//-400px*/
 			
 @media screen and (min-width:768px)
 	.page-promo
+	.page-project	
 		&-logo
 			float left
-			margin-right 2.5rem			
+			margin-right 2.5rem	
+			margin-top -20rem		
 @media screen and (min-width:1024px)
-	.page-promo	
+	.page-promo
+	.page-project	
 		.logo-vivenda
 			margin-right 130px
 			margin-top -140px
 			float right	
 		&-contact
-			margin-right 5rem
-			float right
+			//margin-right 5rem
+			//float right
+			position absolute
+			right 5rem
+			top 0
+			margin-top -460px
+			
 		.details
 			width 40%
 			
@@ -1296,6 +1336,7 @@ textarea
 			padding 1rem
 @media screen and (min-width:1250px)
 	.page-promo
+	.page-project
 		.photos
 			img  
 				width auto
