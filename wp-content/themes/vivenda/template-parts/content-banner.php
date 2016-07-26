@@ -1,9 +1,10 @@
 <section class="banner">
-            <div class='center'>
+            <!--<div class='center'>
                 <span id=prev-banner><i class="icon-arrow-left"></i></span>
                 <span id=next-banner> <i class="icon-arrow-right"></i></span>
-            </div>
-            <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>" data-cycle-prev="#prev-banner"    data-cycle-next="#next-banner">
+            </div>-->
+            <div class="owl-carousel owl-theme">
+            <!--<div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>" data-cycle-prev="#prev-banner"    data-cycle-next="#next-banner">-->
                     
                 <?php
                           $args = array(
@@ -103,7 +104,7 @@
 
                     
         
-                    <div class="banner-pager"></div>
+                    <!--<div class="banner-pager"></div>-->
             </div>
             <a href="#contact" class="adv" title="Consulta Aqui">
                

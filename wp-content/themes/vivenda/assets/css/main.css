@@ -924,14 +924,16 @@ textarea {
   position: relative;
 }
 .banner #prev-banner,
-.banner #next-banner {
+.banner #next-banner,
+.banner .owl-prev,
+.banner .owl-next {
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   z-index: 999;
   color: #fff;
   font-size: 2rem;
@@ -939,11 +941,13 @@ textarea {
   background-color: rgba(0,0,0,0.75);
   padding: 0.5rem;
 }
-.banner #prev-banner {
-  left: 2rem;
+.banner #prev-banner,
+.banner .owl-prev {
+  left: 1rem;
 }
-.banner #next-banner {
-  right: 3rem;
+.banner #next-banner,
+.banner .owl-next {
+  right: 1rem;
 }
 .banner-tag {
   display: none;
@@ -1000,9 +1004,9 @@ textarea {
 .banner-slide {
   background-position: center center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain, contain;
-  -moz-background-size: contain, contain;
-  background-size: contain, contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   height: 300px;
   width: 100%;
   text-align: center;
@@ -1024,6 +1028,16 @@ textarea {
   .banner-info span,
   .banner-slide-info span {
     line-height: 34px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner #prev-banner,
+  .banner .owl-prev {
+    left: 1rem;
+  }
+  .banner #next-banner,
+  .banner .owl-next {
+    right: 3rem;
   }
 }
 @media screen and (min-width: 860px) {

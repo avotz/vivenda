@@ -330,9 +330,11 @@ textarea
 	position relative
 	#prev-banner
 	#next-banner
+	.owl-prev
+	.owl-next
 		position absolute
 		top 50%
-		transform translate(-50%, 0)
+		transform translate(0, -50%)
 		z-index 999
 		color white
 		font-size 2rem
@@ -340,9 +342,11 @@ textarea
 		background-color rgba(0,0,0,.75)
 		padding .5rem
 	#prev-banner
-		left 2rem
+	.owl-prev
+		left 1rem
 	#next-banner
-		right 3rem
+	.owl-next
+		right 1rem
 	&-tag
 		display none 
 		position absolute
@@ -395,7 +399,7 @@ textarea
 .banner-slide
 	background-position center center
 	background-repeat no-repeat
-	background-size contain, contain
+	background-size cover//contain, contain
 	height 300px//620px
 	width 100%
 	text-align center
@@ -417,6 +421,14 @@ textarea
 			span
 				line-height 34px
 
+@media screen and (min-width:768px)
+	.banner
+		#prev-banner
+		.owl-prev
+			left 1rem
+		#next-banner
+		.owl-next
+			right 3rem
 @media screen and (min-width:860px)
 	.banner 
 		&-logo
@@ -441,7 +453,6 @@ textarea
 		&-tag 
 			width auto
 	.banner-slide
-		
 		background-position center  center
 			
 		

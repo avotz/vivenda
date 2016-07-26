@@ -42,8 +42,9 @@ get_header(); ?>
          $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=full' ); 
          if ( $images ) {?>
             <section class="banner">
-                <div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>">
-                    <div class="cycle-pager banner-pager"></div>
+              <div class="owl-carousel owl-theme">
+                <!--<div class="cycle-slideshow" data-cycle-slides=".banner-slide" data-cycle-pager=".banner-pager" data-cycle-timeout="10000"  data-cycle-pager-template="<a href=#></a>">
+                    <div class="cycle-pager banner-pager"></div>-->
                
                <?php foreach ( $images as $image )
                     {?>
@@ -58,10 +59,10 @@ get_header(); ?>
                       
                      }
                 ?>
-                    <div class="center">
+                    <!--<div class="center">
                         <a id="prevGallery" href="#"><i class="icon-angle-left"></i></a>
                         <a id="nextGallery" href="#"><i class="icon-angle-right"></i></a>
-                    </div>
+                    </div>-->
                 </div>
                 
             </section>
