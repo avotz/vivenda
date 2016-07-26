@@ -207,7 +207,20 @@
              <p><?php echo rwmb_meta( 'rw_location'); ?></p>
              
              <a href="#contactForm" class="anchor btn btn-naranja animated infinite tada">Contáctenos Hoy</a>
-            
+              <div class="files">
+              <?php if(rwmb_meta( 'rw_video')) : ?> 
+                <a href="<?php echo rwmb_meta( 'rw_video'); ?>" class="btn-video">Ver video del proyecto <i class='icon icon-youtube'></i></a>
+              <?php endif ?>
+              <?php $files = rwmb_meta( 'rw_project_file' );              // Since 4.8.0
+                  $files = rwmb_meta( 'rw_project_file', 'type=file' ); // Prior to 4.8.0
+                  if ( !empty( $files ) ) {
+                      foreach ( $files as $file ) {
+                          echo "<a href='{$file['url']}' title='{$file['title']}' class='btn-pdf'>Descargue PDF del proyecto <i class='icon icon-download'></i></a>";
+                      }
+                  }
+              ?>
+              
+            </div>
            </div>
          <div class="promo-map">
               <div class="btns">
