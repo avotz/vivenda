@@ -65,7 +65,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 1 - <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');" ></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model " title="Modelo 1 - <?php echo $i; ?>" ><span style="background-image: url('<?php echo $model['url'] ?>');"></span>  </a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 1 - <?php echo $i; ?>" ></a>
@@ -90,7 +90,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 2- <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');"></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model" title="Modelo 2- <?php echo $i; ?>"><span style="background-image: url('<?php echo $model['url'] ?>');"></span></a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 2 - <?php echo $i; ?>"></a>
@@ -115,7 +115,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 3 - <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');"></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model" title="Modelo 3 - <?php echo $i; ?>"><span style="background-image: url('<?php echo $model['url'] ?>');"></span></a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 3 - <?php echo $i; ?>"></a>
@@ -140,7 +140,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 4 - <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');"></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model" title="Modelo 4 - <?php echo $i; ?>"><span style="background-image: url('<?php echo $model['url'] ?>');"></span></a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 4 - <?php echo $i; ?>"></a>
@@ -165,7 +165,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 5 - <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');"></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model" title="Modelo 5 - <?php echo $i; ?>"><span style="background-image: url('<?php echo $model['url'] ?>');"></span></a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 5 - <?php echo $i; ?>"></a>
@@ -190,7 +190,7 @@
                             
                              if ( $i == 1 ) {?>
                                 
-                                <a href="<?php echo $model['url'] ?>" class="btn-model img" title="Modelo 6 - <?php echo $i; ?>" style="background-image: url('<?php echo $model['url'] ?>');"></a>
+                                <a href="<?php echo $model['url'] ?>" class="btn-model" title="Modelo 6 - <?php echo $i; ?>"><span style="background-image: url('<?php echo $model['url'] ?>');"></span></a>
                              
                              <?php }else { ?>
                                 <a href="<?php echo $model['url'] ?>" title="Modelo 6 - <?php echo $i; ?>"></a>

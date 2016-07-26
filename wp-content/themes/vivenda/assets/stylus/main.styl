@@ -134,15 +134,24 @@ textarea
 		background url('./img/bg-btn-models.png') no-repeat transparent;
 		background-size contain*/
 .btn-model
-	background-repeat no-repeat
-	background-color transparent
-	background-size cover
 	display inline-block
 	width 240px
 	height 166px
+	box-shadow 1px 1px 5px rgba(0,0,0,.75)
+	padding .5rem
+	
+	span
+		background-repeat no-repeat
+		background-color transparent
+		background-size cover
+		display block
+		width 100%
+		height 100%
+		
+		
 @media screen and (min-width:1250px)
 	.btn-model
-		width 316px
+		width 300px
 		height 216px
 .home 
 	.header
@@ -1272,10 +1281,11 @@ textarea
 		vertical-align top
 		text-align center
 		margin-bottom 1rem
-		img 
+		img
 			box-shadow 1px 1px 5px rgba(0,0,0,.75)
 			padding .5rem
 			width 225px
+		//span
 		.gallery
 			display inline-block
 			vertical-align top
