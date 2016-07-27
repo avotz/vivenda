@@ -39,7 +39,7 @@ if ( get_post_type( $post ) == 'promociones' ) :
 
 get_header(); ?>
 <?php 
-         $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=full' ); 
+         $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=large' ); 
          if ( $images ) {?>
             <section class="banner">
               <div class="owl-carousel owl-theme">
