@@ -64,7 +64,24 @@
                                                             </div>
                                                             <a href="<?php the_permalink(); ?>" class="project-link">Más Detalles</a>
                                                            
-                                                           
+                                                           <div class="project-icon">
+                                                              <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
+                                                               if ( $images ) {?>
+                                                               
+                                                               
+                                                                  
+                                                                       <?php foreach ( $images as $image ){?>
+                                                                           
+                                                                           <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
+                                                                        
+                                                                        <?php } ?>
+
+                                                                 
+
+                                                               <?php         
+                                                                    }
+                                                                ?>
+                                                          </div>
                                                         </article>
 
                                                       <?php
