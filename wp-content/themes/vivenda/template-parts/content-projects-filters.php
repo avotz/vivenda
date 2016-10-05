@@ -102,9 +102,9 @@
                                            
 
                                          <?php         
-                                              }else{
+                                              }/*else{
                                                     the_title( '<h1 class="page-projectDetails-title">', '</h1>' ); 
-                                              }
+                                              }*/
                                           ?>
                                     </div>
                                     <div class="project-description">
