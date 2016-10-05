@@ -86,7 +86,7 @@
 
                               ?>
                                  
-                                 <article class="project mix <?php echo implode(' ', $categories);  ?> <?php echo $rpItem ?> <?php echo rwmb_meta( 'rw_province'); ?>">
+                                 <article class="project mix <?php echo ($categories) ? implode(' ', $categories) : ''  ?> <?php echo $rpItem ?> <?php echo rwmb_meta( 'rw_province'); ?>">
                                     <div class="project-icon">
                                         <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
                                          if ( $images ) {?>
