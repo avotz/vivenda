@@ -27,8 +27,6 @@
                 </div>
 
              <?php         
-                  }else{
-                        the_title( '<h1 class="page-projectDetails-title">', '</h1>' ); 
                   }
               ?>
               <div class="prices">
