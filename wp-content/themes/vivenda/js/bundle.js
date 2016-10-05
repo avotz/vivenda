@@ -3409,7 +3409,8 @@ return!0}function Q(a,b,d,e){if(m.acceptData(a)){var f,g,h=m.expando,i=a.nodeTyp
       autoplay : true,
       loop : true,
       nav : false,
-      navText : ['<i class="icon-arrow-left"></i>','<i class="icon-arrow-right"></i>']
+      navText : ['<i class="icon-arrow-left"></i>','<i class="icon-arrow-right"></i>'],
+      autoplayTimeout: 8000
       /*onChange : function (e) {
         console.log(e.target);
         $('.owl-item.active span').addClass('animated');
