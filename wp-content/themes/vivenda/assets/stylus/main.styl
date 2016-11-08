@@ -87,7 +87,7 @@ textarea
 	padding 16px 17px 15px 18px
 	//font 16px 'Tinos'
 	color #ffffff
-	background #f5c34c
+	background #e96d09//#f5c34c
 	border none
 	letter-spacing 0
 	text-transform uppercase
@@ -98,7 +98,7 @@ textarea
 	
 	&:hover
 		color #FFF
-		background verde
+		background azul//verde
 		transition all .3s ease
 	
 .wpcf7-submit
@@ -154,10 +154,10 @@ textarea
 		width 300px
 		height 216px
 .home 
-	.header
+	/*.header
 		position absolute //fixed
 		//background transparent
-		//padding-top 6px//25px
+		//padding-top 6px//25px*/
 	.menu 
 		&-bg 
 			&:before
@@ -170,26 +170,32 @@ textarea
 		.header
 			background transparent
 			padding-top 6px */	
+.top 
+	background-color azul
+	color white
+	&-phone
+	&-email
+		display inline-block
+		vertical-align top
+		padding .5rem
+	&-phone
+		border-right 1px solid white
+		
+
 .header
 	position absolute //fixed
-	background azul//rgba(0, 0, 0, .75)
+	background rgba(255, 255, 255, .8)
 	left 0
-	top 0
+	top 41px//0
 	z-index 999
 	width 100%
 	min-height 3em
 	transition all .3s ease
-	//padding-top 10px
-
-	/*&.scrolling
-		background rgba(0, 0, 0, .75)
-		padding-top 10px*/
-		
-		
+	
 
 .header-logo
 	display inline-block
-	width 75px//250px
+	width 120px//75px//250px
 	margin-right 2.5rem
 	padding-top 7px
 .header-logoImg
@@ -201,15 +207,15 @@ textarea
 	background-color transparent
 	border none 
 	outline none 
-	color white
+	color azul
 	font-size 2em
-	top 12px
+	top 25px
 
 
 .menu
 	display none
 	position absolute
-	top 59px
+	top 87px
 	right 15px
 	left 0
 	width 100%
@@ -228,7 +234,7 @@ textarea
 		padding 1em //.5em
 		font-weight bold
 		position relative
-		&:before
+		/*&:before
 		&:after
 			content ''
 			height 8px
@@ -243,7 +249,7 @@ textarea
 		&:after
 			background url('img/hover-menu-right.png') no-repeat azul
 			width 15px
-			right -2px
+			right -2px*/
 
 		&:hover
 			//color naranja
@@ -251,9 +257,10 @@ textarea
 			//background-color naranja
 			//background linear-gradient(to bottom, #f8b03c 11%,#f28c22 11%,#ee7127 21%,#eb5c28 100%); 
 			background linear-gradient(to bottom, #f8b03c 0%,#ffa73d 10%,#ff7c00 13%,#eb5c28 100%);
-			&:before
+			color white
+			/*&:before
 			&:after
-				display block 
+				display block */
 	.sub-menu
 		display none
 		background naranja
@@ -269,9 +276,11 @@ textarea
 	
 @media screen and (min-width:1024px)
 	.header
-		//position //fixed
+		background rgba(255,255,255,0.8)
+		//position static
+		/*
 		background transparent
-		padding-top 6px 	
+		padding-top 6px */	
 		&-btn-menu
 			display none 
 		
@@ -283,7 +292,8 @@ textarea
 		position static
 		width 445px
 		background transparent
-		line-height 46px
+		line-height 71px//46px
+		float right
 	
 
 		li 
@@ -298,6 +308,7 @@ textarea
 
 		a
 			padding .5em
+			color #000
 		
 		.sub-menu
 			position absolute
@@ -312,7 +323,7 @@ textarea
 				&:hover 
 					text-decoration underline
 		&-bg 
-			background-color azul
+			//background-color azul
 			border-radius 10px 
 			padding 0 35px
 			width 575px//460px//575px
@@ -424,6 +435,8 @@ textarea
 		position absolute
 		right 0
 		top 3.5rem
+	.project 
+		min-height auto
 @media screen and (min-width:600px)
 	.banner
 	.banner-slide
@@ -455,8 +468,8 @@ textarea
 			display block
 			width 200px		
 @media screen and (min-width:1024px)
-	.banner
-		margin-top 17px
+	/*.banner
+		margin-top 17px*/
 	.banner-slide
 		background-size cover, cover
 		&-logo
@@ -542,7 +555,7 @@ textarea
 	top 20px
 @media screen and (min-width:1024px)
 	.adv
-		top 0px
+		top 80px
 	.adv-contact
 		height auto
 .menu-slider
@@ -813,8 +826,9 @@ textarea
 	vertical-align top 
 
 .project-icon
-	width 90px 
+	max-width 200px//90px 
 	margin 0 1em
+	padding-top .5rem
 	img 
 		width 100%
 		
@@ -858,10 +872,12 @@ textarea
 		width 370px
 		margin-right 5px
 		margin-left 5px
+		min-height 350px
 		
 	.project-description
-		width 240px
-		text-align left	
+		//width 240px
+		text-align left
+		padding 1rem 2rem	
 		p
 			padding 0
 			
@@ -1140,6 +1156,7 @@ textarea
 		flex-wrap wrap
 		justify-content space-around
 		margin-top 50px
+		
 	.description 
 		min-height 230px
 		//overflow hidden
@@ -1171,7 +1188,7 @@ textarea
 			text-decoration none
 .social-fixed
 	position fixed
-	top 40%
+	top 45%
 	right 0
 	z-index 999
 	display none
@@ -1367,6 +1384,26 @@ textarea
 		.photos
 			img  
 				width auto
-			
+.intro
+	padding 2.5rem 0
+	text-align center
+.testimonials
+	padding 2.5rem 0
+	background-color #EEF0EC
+	
+	&-video
+		iframe
+			width 100%
+@media screen and (min-width:1024px)		
+	.testimonials
+		p 
+			font-size 3rem
+			line-height 3rem
+		.inner 
+			overflow hidden
+		&-video
+			width 500px
+			float left
+			margin-right 2rem	
 @import "responsive.styl"	
 

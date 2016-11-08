@@ -664,7 +664,7 @@ textarea {
   display: inline-block;
   padding: 16px 17px 15px 18px;
   color: #fff;
-  background: #f5c34c;
+  background: #e96d09;
   border: none;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -681,7 +681,7 @@ textarea {
 .wpcf7-submit:hover,
 .btn:hover {
   color: #fff;
-  background: #00a651;
+  background: #2466ae;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -747,9 +747,6 @@ textarea {
     height: 216px;
   }
 }
-.home .header {
-  position: absolute;
-}
 .home .menu-bg:before {
   display: block;
 }
@@ -761,11 +758,24 @@ textarea {
 		.header
 			background transparent
 			padding-top 6px */
+.top {
+  background-color: #2466ae;
+  color: #fff;
+}
+.top-phone,
+.top-email {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5rem;
+}
+.top-phone {
+  border-right: 1px solid #fff;
+}
 .header {
   position: absolute;
-  background: #2466ae;
+  background: rgba(255,255,255,0.8);
   left: 0;
-  top: 0;
+  top: 41px;
   z-index: 999;
   width: 100%;
   min-height: 3em;
@@ -774,13 +784,10 @@ textarea {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-/*&.scrolling
-		background rgba(0, 0, 0, .75)
-		padding-top 10px*/
 }
 .header-logo {
   display: inline-block;
-  width: 75px;
+  width: 120px;
   margin-right: 2.5rem;
   padding-top: 7px;
 }
@@ -793,14 +800,14 @@ textarea {
   background-color: transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: #2466ae;
   font-size: 2em;
-  top: 12px;
+  top: 25px;
 }
 .menu {
   display: none;
   position: absolute;
-  top: 59px;
+  top: 87px;
   right: 15px;
   left: 0;
   width: 100%;
@@ -817,24 +824,22 @@ textarea {
   padding: 1em;
   font-weight: bold;
   position: relative;
-}
-.menu a:before,
-.menu a:after {
-  content: '';
-  height: 8px;
-  display: none;
-  position: absolute;
-  top: 0;
-}
-.menu a:before {
-  background: url("img/hover-menu-left.png") no-repeat #2466ae;
-  width: 13px;
-  left: -9px;
-}
-.menu a:after {
-  background: url("img/hover-menu-right.png") no-repeat #2466ae;
-  width: 15px;
-  right: -2px;
+/*&:before
+		&:after
+			content ''
+			height 8px
+			display none
+			position absolute
+			top 0
+		&:before
+			background url('img/hover-menu-left.png') no-repeat azul
+			width 13px
+			left -9px
+			
+		&:after
+			background url('img/hover-menu-right.png') no-repeat azul
+			width 15px
+			right -2px*/
 }
 .menu a:hover {
   background: -webkit-linear-gradient(top, #f8b03c 0%, #ffa73d 10%, #ff7c00 13%, #eb5c28 100%);
@@ -842,10 +847,10 @@ textarea {
   background: -o-linear-gradient(top, #f8b03c 0%, #ffa73d 10%, #ff7c00 13%, #eb5c28 100%);
   background: -ms-linear-gradient(top, #f8b03c 0%, #ffa73d 10%, #ff7c00 13%, #eb5c28 100%);
   background: linear-gradient(to bottom, #f8b03c 0%, #ffa73d 10%, #ff7c00 13%, #eb5c28 100%);
-}
-.menu a:hover:before,
-.menu a:hover:after {
-  display: block;
+  color: #fff;
+/*&:before
+			&:after
+				display block */
 }
 .menu .sub-menu {
   display: none;
@@ -860,8 +865,10 @@ textarea {
 }
 @media screen and (min-width: 1024px) {
   .header {
-    background: transparent;
-    padding-top: 6px;
+    background: rgba(255,255,255,0.8);
+/*
+		background transparent
+		padding-top 6px */
   }
   .header-btn-menu {
     display: none;
@@ -872,7 +879,8 @@ textarea {
     position: static;
     width: 445px;
     background: transparent;
-    line-height: 46px;
+    line-height: 71px;
+    float: right;
   }
   .menu li {
     display: inline-block;
@@ -886,6 +894,7 @@ textarea {
   }
   .menu a {
     padding: 0.5em;
+    color: #000;
   }
   .menu .sub-menu {
     position: absolute;
@@ -902,7 +911,6 @@ textarea {
     text-decoration: underline;
   }
   .menu-bg {
-    background-color: #2466ae;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     padding: 0 35px;
@@ -1033,6 +1041,9 @@ textarea {
   right: 0;
   top: 3.5rem;
 }
+.banner-slide .project {
+  min-height: auto;
+}
 @media screen and (min-width: 600px) {
   .banner,
   .banner-slide {
@@ -1067,9 +1078,6 @@ textarea {
   }
 }
 @media screen and (min-width: 1024px) {
-  .banner {
-    margin-top: 17px;
-  }
   .banner-slide {
     -webkit-background-size: cover, cover;
     -moz-background-size: cover, cover;
@@ -1177,7 +1185,7 @@ textarea {
 }
 @media screen and (min-width: 1024px) {
   .adv {
-    top: 0px;
+    top: 80px;
   }
   .adv-contact {
     height: auto;
@@ -1537,8 +1545,9 @@ textarea {
   vertical-align: top;
 }
 .project-icon {
-  width: 90px;
+  max-width: 200px;
   margin: 0 1em;
+  padding-top: 0.5rem;
 }
 .project-icon img {
   width: 100%;
@@ -1590,10 +1599,11 @@ textarea {
     width: 370px;
     margin-right: 5px;
     margin-left: 5px;
+    min-height: 350px;
   }
   .project-description {
-    width: 240px;
     text-align: left;
+    padding: 1rem 2rem;
   }
   .project-description p {
     padding: 0;
@@ -1964,7 +1974,7 @@ textarea {
 }
 .social-fixed {
   position: fixed;
-  top: 40%;
+  top: 45%;
   right: 0;
   z-index: 999;
   display: none;
@@ -2228,6 +2238,31 @@ textarea {
     width: auto;
   }
 }
+.intro {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.testimonials {
+  padding: 2.5rem 0;
+  background-color: #eef0ec;
+}
+.testimonials-video iframe {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .testimonials p {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .testimonials .inner {
+    overflow: hidden;
+  }
+  .testimonials-video {
+    width: 500px;
+    float: left;
+    margin-right: 2rem;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .home .banner,
   .home .banner-slide {
@@ -2235,7 +2270,7 @@ textarea {
   }
   .banner,
   .banner-slide {
-    height: 450px;
+    height: 480px;
   }
 }
 
