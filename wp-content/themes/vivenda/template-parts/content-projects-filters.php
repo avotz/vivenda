@@ -87,26 +87,62 @@
                               ?>
                                  
                                  <article class="project mix <?php echo ($categories) ? implode(' ', $categories) : ''  ?> <?php echo $rpItem ?> <?php echo rwmb_meta( 'rw_province'); ?>">
-                                    <div class="project-icon">
-                                        <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
-                                         if ( $images ) {?>
-                                         
-                                         
-                                            
-                                                 <?php foreach ( $images as $image ){?>
+                                   
+                                      
+                                      <?php $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=project-banner-size' ); 
+         
+                                       if ( $images ) {?>
+                                        <!--<div class="project-image" style="background-image: url('<?php echo var_dump($image['url']) ?>');">-->
+                                          
+                                             <?php foreach ( $images as $image )
+                                                  {?>
                                                      
-                                                     <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
+                                                             
+                                                    <div class="project-image" style="background-image: url('<?php echo $image['url'] ?>');">
+                                                     </div>
+                                                         
+                                                      
+
+                                                  <?php
+                                                    break;
+                                                    
+                                                   }
+                                              ?>
                                                   
-                                                  <?php } ?>
+                                        
+                                              
+                                         
 
+                                       <?php         
+                                            }
+                                        ?>
+
+
+
+
+
+
+                                      <div class="project-icon">
+                                          <?php $images = rwmb_meta( 'rw_project_logo', 'type=image&size=large' ); 
+                                           if ( $images ) {?>
                                            
+                                           
+                                              
+                                                   <?php foreach ( $images as $image ){?>
+                                                       
+                                                       <img src="<?php echo $image['url'] ?>" alt="<?php the_title(); ?>" />
+                                                    
+                                                    <?php } ?>
 
-                                         <?php         
-                                              }/*else{
-                                                    the_title( '<h1 class="page-projectDetails-title">', '</h1>' ); 
-                                              }*/
-                                          ?>
-                                    </div>
+                                             
+
+                                           <?php         
+                                                }/*else{
+                                                      the_title( '<h1 class="page-projectDetails-title">', '</h1>' ); 
+                                                }*/
+                                            ?>
+                                      </div>
+                                    
                                     <div class="project-description">
                                         <h3 class="project-title"><?php the_title(); ?></h3>
 
