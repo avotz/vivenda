@@ -89,7 +89,7 @@
                                  <article class="project mix <?php echo ($categories) ? implode(' ', $categories) : ''  ?> <?php echo $rpItem ?> <?php echo rwmb_meta( 'rw_province'); ?>">
                                    
                                       
-                                      <?php $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=project-banner-size' ); 
+                                      <?php $images = rwmb_meta( 'rw_project_thumb', 'type=image&size=large' ); 
          
                                        if ( $images ) {?>
                                         <!--<div class="project-image" style="background-image: url('<?php echo var_dump($image['url']) ?>');">-->
