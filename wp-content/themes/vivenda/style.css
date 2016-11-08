@@ -1337,7 +1337,8 @@ textarea {
   }
 }
 .home .projects-bg,
-.single-projects .projects-bg {
+.single-projects .projects-bg,
+.page-template-page-projects .projects-bg {
   background-image: url("./img/banner3.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
