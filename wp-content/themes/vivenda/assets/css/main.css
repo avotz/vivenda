@@ -670,7 +670,6 @@ textarea {
   text-transform: uppercase;
   text-shadow: none;
   text-decoration: none !important;
-  -webkit-border-radius: 0;
   border-radius: 0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -911,7 +910,6 @@ textarea {
     text-decoration: underline;
   }
   .menu-bg {
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     padding: 0 35px;
     width: 575px;
@@ -1106,7 +1104,6 @@ textarea {
 .menuslider-pager a {
   background-color: #808080;
   border: 1px solid #808080;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   color: $oscuro;
   cursor: pointer;
@@ -1886,7 +1883,6 @@ textarea {
 }
 .img {
   border: 1px solid #dbdbdb;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 0.2em;
   -webkit-box-sizing: border-box;
@@ -1955,6 +1951,7 @@ textarea {
     -webkit-justify-content: space-around;
     justify-content: space-around;
     margin-top: 50px;
+    max-width: 725px;
   }
   .description {
     min-height: 230px;
@@ -2092,7 +2089,6 @@ textarea {
   border: 3px solid #2466ae;
   margin-right: auto;
   margin-left: auto;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   position: relative;
   text-align: center;

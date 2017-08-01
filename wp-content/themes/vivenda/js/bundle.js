@@ -3191,6 +3191,8 @@ return!0}function Q(a,b,d,e){if(m.acceptData(a)){var f,g,h=m.expando,i=a.nodeTyp
             header.removeClass("scrolling");
         }
     });
+     
+    $('#contactForm').find('input[name="wpcf7_project"]').val($('.page-promo-contact').data('project'));
       
      $('.projects').mixItUp();
 

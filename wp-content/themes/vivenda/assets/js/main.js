@@ -11,6 +11,8 @@
             header.removeClass("scrolling");
         }
     });
+     
+    $('#contactForm').find('input[name="wpcf7_project"]').val($('.page-promo-contact').data('project'));
       
      $('.projects').mixItUp();
 

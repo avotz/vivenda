@@ -255,7 +255,7 @@
 
 
   </div>
-	<div id="contactForm" class="page-promo-contact">
+	<div id="contactForm" class="page-promo-contact" data-project="<?php the_title(); ?>">
     <p class="page-promo-contact-info">PARA MÁS INFORMACIÓN REGISTRARSE AQUÍ:</p>
     <?php echo do_shortcode ( '[contact-form-7 id="79" title="Formulario Promociones"]' ) ?>
   </div>
